@@ -1,0 +1,101 @@
+[
+  {
+    "niche": "Family",
+    "source": "ACT Today!",
+    "title": "ACT Today! Autism Care Grant",
+    "link": "https://act-today.org/apply-for-grant/apply-for-assistance/",
+    "deadline": "Rolling (Quarterly)",
+    "amount": "5,000",
+    "eligibility": "Families of children with autism. Priority given to households with income under $100,000. Funding covers ABA, speech therapy, OT, medications, and home safety devices.",
+    "summary": "ACT Today! provides quarterly grants up to $5,000 to help families access autism-related therapies including speech, OT, and ABA that they otherwise could not afford.",
+    "category": "grant"
+  },
+  {
+    "niche": "Family",
+    "source": "UnitedHealthcare Children's Foundation",
+    "title": "UHCCF Medical Grant for Children",
+    "link": "https://www.uhccf.org/apply-for-a-grant/",
+    "deadline": "Rolling",
+    "amount": "5,000",
+    "eligibility": "Families with children who need health-related services not covered or not fully covered by commercial health insurance. Up to $5,000/year per child ($10,000 lifetime max). Do NOT need UnitedHealthcare insurance.",
+    "summary": "UHCCF provides grants to help children access medical services including speech therapy, occupational therapy, and physical therapy not fully covered by insurance.",
+    "category": "grant"
+  },
+  {
+    "niche": "Family",
+    "source": "The Orange Effect Foundation",
+    "title": "Orange Effect Speech Therapy Grant",
+    "link": "https://theorangeeffect.org/grant-application/",
+    "deadline": "Rolling",
+    "amount": "1,000",
+    "eligibility": "Children and adults who need speech therapy or communication devices. Must demonstrate financial need. Funds go directly to the service provider.",
+    "summary": "The Orange Effect Foundation funds speech therapy sessions and communication technology (AAC devices) for individuals who cannot afford them.",
+    "category": "grant"
+  },
+  {
+    "niche": "Family",
+    "source": "Small Steps in Speech",
+    "title": "Small Steps in Speech Therapy Grant",
+    "link": "https://smallstepsinspeech.org",
+    "deadline": "Rolling",
+    "amount": "2,500",
+    "eligibility": "Families with children who need speech therapy services. Must demonstrate financial need.",
+    "summary": "Provides grants specifically for speech therapy and communication needs for children whose families face financial barriers to accessing care.",
+    "category": "grant"
+  },
+  {
+    "niche": "Family",
+    "source": "Autism Care Today",
+    "title": "Autism Care Today Quarterly Assistance",
+    "link": "https://www.autismcaretoday.org",
+    "deadline": "Rolling (Quarterly)",
+    "amount": "5,000",
+    "eligibility": "Families of children diagnosed with autism spectrum disorder. Funds are paid directly to the child's service provider.",
+    "summary": "Provides quarterly financial assistance by directly paying a child's therapy provider for ABA, speech, OT, and other autism-related services families couldn't otherwise afford.",
+    "category": "grant"
+  },
+  {
+    "niche": "Family",
+    "source": "Maggie Welby Foundation",
+    "title": "Maggie Welby Family Grant",
+    "link": "https://www.maggiewelbyfoundation.org",
+    "deadline": "Rolling",
+    "amount": "Varies",
+    "eligibility": "Children and families with financial need for medical, therapeutic, athletic, or educational opportunities.",
+    "summary": "Offers grants for children and families that have a financial need, including therapy services, medical needs, adaptive equipment, and opportunities a child would not otherwise have.",
+    "category": "grant"
+  },
+  {
+    "niche": "Family",
+    "source": "Special Angels Foundation",
+    "title": "Special Angels Foundation Grant",
+    "link": "https://www.specialangelsfoundation.org",
+    "deadline": "Rolling",
+    "amount": "Varies",
+    "eligibility": "Children with special needs requiring therapy, equipment, or medical services not covered by insurance.",
+    "summary": "Provides grants for children with special needs including therapy services, adaptive equipment, and medical support that insurance does not cover.",
+    "category": "grant"
+  },
+  {
+    "niche": "Family",
+    "source": "Variety - The Children's Charity",
+    "title": "Variety Children's Grant",
+    "link": "https://usvariety.org",
+    "deadline": "Rolling",
+    "amount": "5,000",
+    "eligibility": "Children with special needs through age 21. Up to $5,000/year with a $10,000 lifetime max. State chapters across the US.",
+    "summary": "Empowers children with special needs by funding therapy, adaptive equipment, and mobility devices. Has state chapters across the US with local grant programs.",
+    "category": "grant"
+  },
+  {
+    "niche": "Family",
+    "source": "NAPA Center / SupportNow",
+    "title": "SupportNow Therapy Grant Directory",
+    "link": "https://grants.supportnow.org/lists/napa-center-us-active-therapy-grant-programs",
+    "deadline": "Varies",
+    "amount": "Varies",
+    "eligibility": "Families seeking therapy funding. SupportNow provides a curated directory of active grants plus a free Fundraising Consultant.",
+    "summary": "A comprehensive, regularly updated directory of active therapy grant programs across the US. Includes a free Fundraising Consultant to help families navigate applications.",
+    "category": "directory"
+  }
+]

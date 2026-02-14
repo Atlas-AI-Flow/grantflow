@@ -14,6 +14,8 @@ import hashlib
 from datetime import datetime
 
 INPUT_FILE = "data/grants_enriched.json"
+FAMILY_FILE = "data/family_grants.json"
+RESOURCES_FILE = "data/free_resources.json"
 OUTPUT_DIR = "site"
 SITE_URL = "https://grantflow.vercel.app"
 BRAND = "GrantFlow"
@@ -237,10 +239,10 @@ def build_index(grants, grant_slugs):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{BRAND} | Allied Health Grants & Scholarships 2026</title>
-    <meta name="description" content="Discover {total}+ grants, scholarships, and fellowships for PT, OT, SLP, and allied health professionals. Updated daily.">
+    <title>{BRAND} | Allied Health Grants, Scholarships & Family Resources 2026</title>
+    <meta name="description" content="Discover {total}+ grants, scholarships, and fellowships for PT, OT, SLP professionals and families seeking therapy funding. Updated daily.">
     <meta property="og:title" content="{BRAND} - Allied Health Grant Finder">
-    <meta property="og:description" content="Discover {total}+ grants for allied health professionals.">
+    <meta property="og:description" content="Discover {total}+ grants for allied health professionals and families.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{SITE_URL}">
     <link rel="canonical" href="{SITE_URL}">
@@ -248,11 +250,21 @@ def build_index(grants, grant_slugs):
 </head>
 <body class="bg-gray-50 text-gray-800 min-h-screen">
 
+    <nav class="bg-white border-b">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="index.html" class="text-xl font-bold text-blue-700">&#x1f680; {BRAND}</a>
+            <div class="flex gap-4 text-sm">
+                <a href="index.html" class="text-blue-600 font-semibold">Grants</a>
+                <a href="resources.html" class="text-gray-500 hover:text-blue-600">Free Resources</a>
+            </div>
+        </div>
+    </nav>
+
     <!-- Hero -->
     <header class="bg-gradient-to-br from-blue-700 to-indigo-800 text-white">
         <div class="max-w-6xl mx-auto px-4 py-12">
-            <h1 class="text-4xl md:text-5xl font-bold">🚀 {BRAND}</h1>
-            <p class="mt-3 text-lg text-blue-100 max-w-2xl">Automated grant discovery for allied health professionals. PT, OT, SLP funding — scraped, enriched, and organized daily.</p>
+            <h1 class="text-4xl md:text-5xl font-bold">&#x1f680; {BRAND}</h1>
+            <p class="mt-3 text-lg text-blue-100 max-w-2xl">Grant discovery for allied health professionals and families. PT, OT, SLP funding — scraped, enriched, and organized daily.</p>
             <p class="mt-2 text-sm text-blue-200">Last updated: {datetime.now().strftime("%B %d, %Y")} &middot; {total} opportunities tracked</p>
         </div>
     </header>
@@ -278,11 +290,18 @@ def build_index(grants, grant_slugs):
 
         <p id="no-results" class="hidden text-center text-gray-400 py-12 text-lg">No grants match your search.</p>
 
+        <!-- Free Resources CTA -->
+        <div class="mt-12 bg-emerald-50 border border-emerald-200 rounded-xl p-8 text-center">
+            <h2 class="text-2xl font-bold text-emerald-800 mb-3">&#x1f49a; Need Free or Low-Cost Therapy?</h2>
+            <p class="text-emerald-700 mb-4">Many families qualify for free therapy services through government programs, Regional Centers, and Early Intervention. We've compiled the best resources.</p>
+            <a href="resources.html" class="inline-block bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-emerald-700 transition">Browse Free Resources &rarr;</a>
+        </div>
+
     </main>
 
     <footer class="bg-gray-800 text-gray-400 py-6 mt-12">
         <div class="max-w-6xl mx-auto px-4 text-center text-sm">
-            <p>&copy; 2026 {BRAND}. Automated grant discovery for allied health professionals.</p>
+            <p>&copy; 2026 {BRAND}. Automated grant discovery for allied health professionals and families.</p>
             <p class="mt-1">Data sourced from public foundations. Always verify details on official sites.</p>
         </div>
     </footer>
@@ -320,7 +339,10 @@ def build_index(grants, grant_slugs):
 </html>'''
 
 def build_sitemap(slugs):
-    urls = [f"  <url><loc>{SITE_URL}/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>"]
+    urls = [
+        f"  <url><loc>{SITE_URL}/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>",
+        f"  <url><loc>{SITE_URL}/resources.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>",
+    ]
     for slug in slugs:
         urls.append(f"  <url><loc>{SITE_URL}/grants/{slug}.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>")
 
@@ -328,6 +350,90 @@ def build_sitemap(slugs):
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {chr(10).join(urls)}
 </urlset>'''
+
+def build_resources_page(resources):
+    cards = ""
+    for r in resources:
+        services = ", ".join(r.get("services", []))
+        highlight_class = "ring-2 ring-blue-300" if r.get("highlight") else ""
+
+        cards += f'''
+<div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition {highlight_class}">
+    <div class="flex items-center justify-between mb-2">
+        <span class="inline-block bg-emerald-100 text-emerald-700 text-xs font-bold uppercase px-2 py-0.5 rounded-full">{r.get("type", "Resource")}</span>
+        <span class="text-xs text-gray-400">{r.get("coverage", "")}</span>
+    </div>
+    <h3 class="text-lg font-bold text-gray-900 mb-2">{r["title"]}</h3>
+    <p class="text-sm text-gray-600 mb-3">{r["description"]}</p>
+    <div class="text-xs text-gray-500 mb-2"><strong>Services:</strong> {services}</div>
+    <div class="text-xs text-gray-500 mb-3 bg-gray-50 p-2 rounded"><strong>Eligibility:</strong> {r.get("eligibility", "See website")}</div>
+    <a href="{r["link"]}" target="_blank" rel="noopener" class="inline-block bg-emerald-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-emerald-700 transition">
+        Learn More &rarr;
+    </a>
+</div>'''
+
+    return f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Therapy Resources for Families | {BRAND}</title>
+    <meta name="description" content="Free and low-cost speech therapy, occupational therapy, and physical therapy resources for families. Regional centers, early intervention, government programs, and more.">
+    <meta property="og:title" content="Free Therapy Resources for Families | {BRAND}">
+    <meta property="og:description" content="Free and low-cost therapy resources including Regional Centers, Early Intervention, Medicaid, and university clinics.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{SITE_URL}/resources.html">
+    <link rel="canonical" href="{SITE_URL}/resources.html">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 min-h-screen">
+
+    <nav class="bg-white border-b">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="index.html" class="text-xl font-bold text-blue-700">&#x1f680; {BRAND}</a>
+            <div class="flex gap-4 text-sm">
+                <a href="index.html" class="text-gray-500 hover:text-blue-600">Grants</a>
+                <a href="resources.html" class="text-blue-600 font-semibold">Free Resources</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-gradient-to-br from-emerald-600 to-teal-700 text-white">
+        <div class="max-w-6xl mx-auto px-4 py-12">
+            <h1 class="text-4xl md:text-5xl font-bold">&#x1f49a; Free & Low-Cost Resources</h1>
+            <p class="mt-3 text-lg text-emerald-100 max-w-2xl">Government programs, nonprofits, and community resources that help families access speech therapy, OT, PT, and early intervention services — often at no cost.</p>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-8">
+
+        <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-8">
+            <h2 class="text-lg font-bold text-blue-800 mb-2">&#x1f4a1; Did you know?</h2>
+            <p class="text-sm text-blue-700">Many families qualify for free therapy services and don't realize it. Federal programs like Early Intervention (ages 0-3) and school-based services (ages 3-21) are available in every state. California's Regional Centers provide free assessments and services regardless of income for young children.</p>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-2">
+            {cards}
+        </div>
+
+        <div class="mt-12 bg-gray-100 rounded-xl p-8 text-center">
+            <h2 class="text-2xl font-bold text-gray-800 mb-3">Looking for Grants Instead?</h2>
+            <p class="text-gray-600 mb-4">We track 40+ grants and scholarships for allied health professionals and families.</p>
+            <a href="index.html" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">Browse All Grants &rarr;</a>
+        </div>
+
+    </main>
+
+    <footer class="bg-gray-800 text-gray-400 py-6 mt-12">
+        <div class="max-w-6xl mx-auto px-4 text-center text-sm">
+            <p>&copy; 2026 {BRAND}. Automated grant discovery for allied health professionals and families.</p>
+            <p class="mt-1">Information is for guidance only. Always verify details on official sites.</p>
+        </div>
+    </footer>
+
+</body>
+</html>'''
+
 
 def build_robots():
     return f"""User-agent: *
@@ -340,7 +446,28 @@ def build():
     with open(INPUT_FILE, 'r', encoding='utf-8') as f:
         grants = json.load(f)
 
-    print(f"Loaded {len(grants)} grants")
+    print(f"Loaded {len(grants)} scraped grants")
+
+    # Load curated family grants
+    family_grants = []
+    if os.path.exists(FAMILY_FILE):
+        with open(FAMILY_FILE, 'r', encoding='utf-8') as f:
+            family_grants = json.load(f)
+        print(f"Loaded {len(family_grants)} curated family grants")
+
+    # Load free resources
+    resources = []
+    if os.path.exists(RESOURCES_FILE):
+        with open(RESOURCES_FILE, 'r', encoding='utf-8') as f:
+            resources = json.load(f)
+        print(f"Loaded {len(resources)} free resources")
+
+    # Merge family grants into main list
+    for fg in family_grants:
+        fg['found_at'] = fg.get('found_at', datetime.now().isoformat())
+        fg['enriched_at'] = fg.get('enriched_at', datetime.now().isoformat())
+    grants.extend(family_grants)
+    print(f"Total after merge: {len(grants)}")
 
     # Clean up
     grants = filter_junk(grants)
@@ -395,9 +522,16 @@ def build():
     with open(os.path.join(OUTPUT_DIR, "robots.txt"), 'w', encoding='utf-8') as f:
         f.write(robots)
 
+    # Build resources page
+    if resources:
+        resources_html = build_resources_page(resources)
+        with open(os.path.join(OUTPUT_DIR, "resources.html"), 'w', encoding='utf-8') as f:
+            f.write(resources_html)
+        print("Generated resources.html")
+
     print("Generated sitemap.xml + robots.txt")
     print(f"\nSite ready in ./{OUTPUT_DIR}/")
-    print(f"  {len(grants)} grant pages")
+    print(f"  {len(grants)} grant pages + resources page")
     print(f"  Niches: {', '.join(sorted(set(g['niche'] for g in grants)))}")
 
 if __name__ == "__main__":

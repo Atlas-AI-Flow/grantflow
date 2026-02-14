@@ -1,0 +1,75 @@
+[
+  {
+    "title": "California Regional Centers",
+    "description": "21 Regional Centers across California provide free assessments, service coordination, and referrals for individuals with developmental disabilities. Services include speech therapy, occupational therapy, physical therapy, and behavioral services — at no cost to eligible families.",
+    "link": "https://www.dds.ca.gov/rc/",
+    "type": "Government Program",
+    "coverage": "California",
+    "services": ["Speech Therapy", "Occupational Therapy", "Physical Therapy", "Behavioral Services", "Early Intervention"],
+    "eligibility": "Individuals with developmental disabilities or delays. For children 0-3, the Early Start Program provides evaluations and services regardless of income.",
+    "highlight": true
+  },
+  {
+    "title": "San Diego Regional Center (SDRC)",
+    "description": "Serves San Diego and Imperial Counties. The Early Start Program provides free assessments to infants and toddlers with suspected developmental delays. Eligible families receive an Individualized Family Service Plan (IFSP) with coordinated therapy services.",
+    "link": "https://www.sdrc.org/apply",
+    "type": "Government Program",
+    "coverage": "San Diego & Imperial Counties, CA",
+    "services": ["Early Intervention (0-3)", "Speech Therapy", "Occupational Therapy", "Service Coordination"],
+    "eligibility": "Infants, toddlers, children, and adults with developmental disabilities. No income requirement for Early Start (ages 0-3)."
+  },
+  {
+    "title": "IDEA Part C - Early Intervention Program",
+    "description": "A federal program (Individuals with Disabilities Education Act) that provides early intervention services to infants and toddlers (birth to age 3) with developmental delays. Every state has a program — services are free or low-cost and include speech therapy, OT, PT, and family support.",
+    "link": "https://www.cdc.gov/ncbddd/actearly/parents/states.html",
+    "type": "Federal Program",
+    "coverage": "All 50 States",
+    "services": ["Speech Therapy", "Occupational Therapy", "Physical Therapy", "Family Training", "Developmental Assessments"],
+    "eligibility": "Children birth to age 3 with developmental delays or conditions likely to cause delays. Free regardless of income in most states."
+  },
+  {
+    "title": "IDEA Part B - Special Education (Ages 3-21)",
+    "description": "Once children turn 3, they may qualify for free therapy services through their local school district's special education program. Schools must provide speech therapy, OT, and other related services identified in a child's IEP (Individualized Education Program) at no cost.",
+    "link": "https://sites.ed.gov/idea/",
+    "type": "Federal Program",
+    "coverage": "All 50 States",
+    "services": ["Speech Therapy", "Occupational Therapy", "Physical Therapy", "Behavioral Support"],
+    "eligibility": "Children ages 3-21 who qualify for special education services through evaluation. Provided free through public schools."
+  },
+  {
+    "title": "Medicaid / EPSDT (Early and Periodic Screening)",
+    "description": "Medicaid requires coverage of therapy services for children under EPSDT. If your child is on Medicaid or CHIP, they are entitled to speech therapy, OT, PT, and mental health services deemed medically necessary — even if your state Medicaid plan doesn't normally cover them.",
+    "link": "https://www.medicaid.gov/medicaid/benefits/early-and-periodic-screening-diagnostic-and-treatment/index.html",
+    "type": "Federal Program",
+    "coverage": "All 50 States",
+    "services": ["Speech Therapy", "Occupational Therapy", "Physical Therapy", "Mental Health", "Developmental Screenings"],
+    "eligibility": "Children under 21 enrolled in Medicaid or CHIP. Income thresholds vary by state but cover many working families."
+  },
+  {
+    "title": "State Children's Health Insurance Program (CHIP)",
+    "description": "For families who earn too much for Medicaid but can't afford private insurance. CHIP provides low-cost or free health coverage including therapy services for children. Many states cover speech, OT, and PT under CHIP.",
+    "link": "https://www.healthcare.gov/medicaid-chip/childrens-health-insurance-program/",
+    "type": "Federal Program",
+    "coverage": "All 50 States",
+    "services": ["Speech Therapy", "Occupational Therapy", "Physical Therapy", "Preventive Care"],
+    "eligibility": "Uninsured children in families with incomes too high for Medicaid. Income limits vary by state."
+  },
+  {
+    "title": "University Speech & Hearing Clinics",
+    "description": "Many universities with speech-language pathology programs operate clinics that provide speech therapy at significantly reduced rates (often free or sliding scale). Supervised by licensed SLPs, these clinics are an excellent option for families seeking affordable care.",
+    "link": "https://www.asha.org/students/find-a-graduate-program/",
+    "type": "Reduced Cost",
+    "coverage": "Nationwide (varies by university)",
+    "services": ["Speech Therapy", "Language Evaluations", "Hearing Screenings", "AAC Assessments"],
+    "eligibility": "Open to the public. Fees are typically free or on a sliding scale. Wait times may be longer."
+  },
+  {
+    "title": "Easter Seals",
+    "description": "Provides therapy services, early intervention, and support programs for children and adults with disabilities across the US. Many locations offer sliding-scale fees and connect families with additional funding resources.",
+    "link": "https://www.easterseals.com/explore-resources/",
+    "type": "Nonprofit",
+    "coverage": "Nationwide",
+    "services": ["Speech Therapy", "Occupational Therapy", "Physical Therapy", "Early Intervention", "Autism Services"],
+    "eligibility": "Children and adults with disabilities. Financial assistance and sliding scale fees available at many locations."
+  }
+]
