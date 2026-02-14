@@ -16,7 +16,7 @@ from datetime import datetime
 INPUT_FILE = "data/grants_enriched.json"
 FAMILY_FILE = "data/family_grants.json"
 RESOURCES_FILE = "data/free_resources.json"
-OUTPUT_DIR = "docs"
+OUTPUT_DIR = "."
 SITE_URL = "https://grantflow.vercel.app"
 BRAND = "GrantFlow"
 
