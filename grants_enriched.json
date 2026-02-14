@@ -1,0 +1,104 @@
+[
+  {
+    "niche": "SLP",
+    "source": "ASHFoundation",
+    "title": "Artificial Intelligence in Communication Sciences and Disorders Research Grant",
+    "link": "https://www.ashfoundation.org/apply/artificial-intelligence-in-communication-sciences-and-disorders-research-grant/",
+    "found_at": "2026-02-10T19:53:45.160722",
+    "deadline": "April 22, 2026",
+    "amount": "25,000",
+    "enrichment_source": "regex"
+  },
+  {
+    "niche": "SLP",
+    "source": "ASHFoundation",
+    "title": "Researcher\u2013Practitioner Collaboration Grant",
+    "link": "https://www.ashfoundation.org/apply/researcher-practitioner-collaboration-grant/",
+    "found_at": "2026-02-10T19:53:45.160733",
+    "deadline": "April 22, 2026",
+    "amount": "35,000",
+    "enrichment_source": "regex"
+  },
+  {
+    "niche": "SLP",
+    "source": "ASHFoundation",
+    "title": "New Century Scholars Research Grant",
+    "link": "https://www.ashfoundation.org/apply/new-century-scholars-research-grant/",
+    "found_at": "2026-02-10T19:53:45.160738",
+    "deadline": "April 22, 2026",
+    "amount": "25,000",
+    "enrichment_source": "regex"
+  },
+  {
+    "niche": "SLP",
+    "source": "ASHFoundation",
+    "title": "New Investigators Research Grant",
+    "link": "https://www.ashfoundation.org/apply/new-investigators-research-grant/",
+    "found_at": "2026-02-10T19:53:45.160741",
+    "deadline": "April 22, 2026",
+    "amount": "10,000",
+    "enrichment_source": "regex"
+  },
+  {
+    "niche": "SLP",
+    "source": "ASHFoundation",
+    "title": "Speech Science Research Grant",
+    "link": "https://www.ashfoundation.org/apply/speech-science-research-grant/",
+    "found_at": "2026-02-10T19:53:45.160744",
+    "deadline": "April 22, 2026",
+    "amount": "10,000",
+    "enrichment_source": "regex"
+  },
+  {
+    "niche": "SLP",
+    "source": "ASHFoundation",
+    "title": "Student Research Grant in Audiology",
+    "link": "https://www.ashfoundation.org/apply/student-research-grant-in-audiology/",
+    "found_at": "2026-02-10T19:53:45.160747",
+    "deadline": "April 22, 2026",
+    "amount": "4,000",
+    "enrichment_source": "regex"
+  },
+  {
+    "niche": "SLP",
+    "source": "ASHFoundation",
+    "title": "Student Research Grant in Early Childhood Language Development",
+    "link": "https://www.ashfoundation.org/apply/student-research-grant-in-early-childhood-language-development/",
+    "found_at": "2026-02-10T19:53:45.160751",
+    "deadline": "April 22, 2026",
+    "amount": "4,000",
+    "enrichment_source": "regex"
+  },
+  {
+    "niche": "SLP",
+    "source": "ASHFoundation",
+    "title": "New Century Scholars Doctoral Scholarship",
+    "link": "https://www.ashfoundation.org/apply/new-century-scholars-doctoral-scholarship/",
+    "found_at": "2026-02-10T19:53:45.160758",
+    "deadline": "May 13, 2026",
+    "amount": "10,000",
+    "enrichment_source": "regex"
+  },
+  {
+    "niche": "SLP",
+    "source": "ASHFoundation",
+    "title": "Graduate Student Scholarship",
+    "link": "https://www.ashfoundation.org/apply/graduate-student-scholarship/",
+    "found_at": "2026-02-10T19:53:45.160761",
+    "deadline": "Rolling",
+    "amount": "5,000",
+    "enrichment_source": "ai",
+    "eligibility": "Full-time graduate students enrolled or planning to enroll in a communication sciences and disorders program, including both research and clinical doctorate students; non-U.S. citizens studying in the U.S. are also eligible for specific endowed scholarships."
+  },
+  {
+    "niche": "SLP",
+    "source": "ASHFoundation",
+    "title": "Frank R. Kleffner Lifetime Clinical Career Award",
+    "link": "https://www.ashfoundation.org/apply/frank-kleffner-lifetime-clinical-career-award/",
+    "found_at": "2026-02-10T19:53:45.160765",
+    "deadline": "April 15, 2026",
+    "amount": "N/A",
+    "enrichment_source": "ai",
+    "eligibility": "Individuals with outstanding contributions to communication sciences and disorders over at least 20 years"
+  }
+]
