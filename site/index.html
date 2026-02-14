@@ -3,277 +3,294 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GrantFlow | Allied Health Grants, Scholarships & Family Resources 2026</title>
-    <meta name="description" content="Discover 44+ grants, scholarships, and fellowships for PT, OT, SLP professionals and families seeking therapy funding. Updated daily.">
-    <meta property="og:title" content="GrantFlow - Allied Health Grant Finder">
+    <title>GrantFlow | Free Grant Directory for PT, OT, SLP & Families</title>
+    <meta name="description" content="A free, curated directory of 44+ grants and scholarships for physical therapy, occupational therapy, speech pathology, and families. Updated regularly.">
+    <meta property="og:title" content="GrantFlow - Free Allied Health Grant Directory">
     <meta property="og:description" content="Discover 44+ grants for allied health professionals and families.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://grantflow.vercel.app">
     <link rel="canonical" href="https://grantflow.vercel.app">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'); body { font-family: 'Inter', sans-serif; }</style>
 </head>
-<body class="bg-gray-50 text-gray-800 min-h-screen">
+<body class="bg-slate-50 text-slate-800 min-h-screen">
 
-    <nav class="bg-white border-b">
-        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-            <a href="index.html" class="text-xl font-bold text-blue-700">&#x1f680; GrantFlow</a>
-            <div class="flex gap-4 text-sm">
-                <a href="index.html" class="text-blue-600 font-semibold">Grants</a>
-                <a href="resources.html" class="text-gray-500 hover:text-blue-600">Free Resources</a>
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="index.html" class="text-xl font-bold text-slate-800 flex items-center gap-2">💙 GrantFlow</a>
+            <div class="flex gap-6 text-sm font-medium">
+                <a href="index.html" class="text-teal-700">Directory</a>
+                <a href="resources.html" class="text-gray-500 hover:text-teal-600 transition">Free Resources</a>
+                <a href="#about" class="text-gray-500 hover:text-teal-600 transition hidden sm:inline-block">About</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero -->
-    <header class="bg-gradient-to-br from-blue-700 to-indigo-800 text-white">
-        <div class="max-w-6xl mx-auto px-4 py-12">
-            <h1 class="text-4xl md:text-5xl font-bold">&#x1f680; GrantFlow</h1>
-            <p class="mt-3 text-lg text-blue-100 max-w-2xl">Grant discovery for allied health professionals and families. PT, OT, SLP funding — scraped, enriched, and organized daily.</p>
-            <p class="mt-2 text-sm text-blue-200">Last updated: February 13, 2026 &middot; 44 opportunities tracked</p>
+    <header class="bg-white border-b border-gray-200">
+        <div class="max-w-4xl mx-auto px-4 py-16 text-center">
+            <span class="inline-block py-1 px-3 rounded-full bg-teal-50 text-teal-700 text-xs font-bold uppercase tracking-wide mb-4 border border-teal-100">Free Community Resource</span>
+            <h1 class="text-4xl md:text-6xl font-bold text-slate-900 mb-6 tracking-tight">Find funding for your practice<br><span class="text-teal-600">or your family.</span></h1>
+            <p class="text-lg text-slate-500 max-w-2xl mx-auto mb-8 leading-relaxed">A curated, searchable directory of grants, scholarships, and financial aid for PT, OT, SLP professionals and families with special needs.</p>
+            
+            <div class="flex flex-wrap justify-center gap-8 text-sm text-gray-400 font-medium">
+                <span class="flex items-center gap-2"><span class="w-2 h-2 bg-green-500 rounded-full"></span> Updated: February 13, 2026</span>
+                <span class="flex items-center gap-2"><span class="w-2 h-2 bg-blue-500 rounded-full"></span> 44 Active Opportunities</span>
+                <span class="flex items-center gap-2"><span class="w-2 h-2 bg-purple-500 rounded-full"></span> 100% Free to Use</span>
+            </div>
         </div>
     </header>
 
-    <main class="max-w-6xl mx-auto px-4 py-8">
+    <main class="max-w-6xl mx-auto px-4 py-12">
 
         <!-- Stats -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
-            <div class="bg-pink-50 rounded-lg p-4 text-center"><p class="text-2xl font-bold text-pink-700">10</p><p class="text-xs text-gray-500">Family & Children</p></div>
-<div class="bg-orange-50 rounded-lg p-4 text-center"><p class="text-2xl font-bold text-orange-700">19</p><p class="text-xs text-gray-500">Occupational Therapy</p></div>
-<div class="bg-green-50 rounded-lg p-4 text-center"><p class="text-2xl font-bold text-green-700">3</p><p class="text-xs text-gray-500">Physical Therapy</p></div>
-<div class="bg-purple-50 rounded-lg p-4 text-center"><p class="text-2xl font-bold text-purple-700">12</p><p class="text-xs text-gray-500">Speech-Language Pathology</p></div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+            <div class="bg-white border border-gray-100 rounded-xl p-4 text-center shadow-sm"><p class="text-3xl font-bold text-sky-600">10</p><p class="text-xs font-semibold uppercase text-gray-400 mt-1 tracking-wide">Family & Children</p></div>
+<div class="bg-white border border-gray-100 rounded-xl p-4 text-center shadow-sm"><p class="text-3xl font-bold text-orange-600">19</p><p class="text-xs font-semibold uppercase text-gray-400 mt-1 tracking-wide">Occupational Therapy</p></div>
+<div class="bg-white border border-gray-100 rounded-xl p-4 text-center shadow-sm"><p class="text-3xl font-bold text-green-600">3</p><p class="text-xs font-semibold uppercase text-gray-400 mt-1 tracking-wide">Physical Therapy</p></div>
+<div class="bg-white border border-gray-100 rounded-xl p-4 text-center shadow-sm"><p class="text-3xl font-bold text-purple-600">12</p><p class="text-xs font-semibold uppercase text-gray-400 mt-1 tracking-wide">Speech-Language Pathology</p></div>
 
         </div>
 
         <!-- Search + Filters -->
-        <div class="bg-white rounded-xl shadow-sm p-4 mb-8 flex flex-wrap gap-3 items-center">
-            <input type="text" id="search" placeholder="Search grants..." oninput="filterAll()" class="flex-1 min-w-[200px] border border-gray-200 rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-300">
-            <button onclick="filterNiche('ALL')" class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 font-medium text-sm transition active-filter">All</button>
-            <button onclick="filterNiche('Family')" class="px-4 py-2 bg-pink-50 text-pink-700 rounded-lg hover:bg-pink-100 font-medium text-sm transition">👨‍👩‍👧‍👦 Family</button>
-<button onclick="filterNiche('OT')" class="px-4 py-2 bg-orange-50 text-orange-700 rounded-lg hover:bg-orange-100 font-medium text-sm transition">🖐️ OT</button>
-<button onclick="filterNiche('PT')" class="px-4 py-2 bg-green-50 text-green-700 rounded-lg hover:bg-green-100 font-medium text-sm transition">🏃 PT</button>
-<button onclick="filterNiche('SLP')" class="px-4 py-2 bg-purple-50 text-purple-700 rounded-lg hover:bg-purple-100 font-medium text-sm transition">🗣️ SLP</button>
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-4 mb-8 sticky top-20 z-40 transition-shadow hover:shadow-md">
+            <div class="flex flex-wrap gap-4 items-center">
+                <div class="relative flex-1 min-w-[200px]">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    </div>
+                    <input type="text" id="search" placeholder="Search by name, foundation, or keyword..." oninput="filterAll()" class="w-full pl-10 border border-gray-200 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition">
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <button onclick="filterNiche('ALL')" class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 font-medium text-sm transition active-filter">All Grants</button>
+                    <button onclick="filterNiche('Family')" class="px-4 py-2 bg-white border border-gray-200 text-gray-600 rounded-lg hover:border-sky-300 hover:text-sky-700 hover:bg-sky-50 font-medium text-sm transition shadow-sm">💙 Family</button>
+<button onclick="filterNiche('OT')" class="px-4 py-2 bg-white border border-gray-200 text-gray-600 rounded-lg hover:border-orange-300 hover:text-orange-700 hover:bg-orange-50 font-medium text-sm transition shadow-sm">🖐️ OT</button>
+<button onclick="filterNiche('PT')" class="px-4 py-2 bg-white border border-gray-200 text-gray-600 rounded-lg hover:border-green-300 hover:text-green-700 hover:bg-green-50 font-medium text-sm transition shadow-sm">🏃 PT</button>
+<button onclick="filterNiche('SLP')" class="px-4 py-2 bg-white border border-gray-200 text-gray-600 rounded-lg hover:border-purple-300 hover:text-purple-700 hover:bg-purple-50 font-medium text-sm transition shadow-sm">🗣️ SLP</button>
 
+                </div>
+            </div>
         </div>
 
         <!-- Grid -->
-        <div id="grid" class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div id="grid" class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             
-<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-pink-500" data-niche="Family" data-title="act today! autism care grant">
+<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 border-l-4 border-l-sky-500" data-niche="Family" data-title="act today! autism care grant">
     <div class="flex items-center justify-between mb-2">
-        <span class="text-xs font-bold uppercase tracking-wider text-pink-600">👨‍👩‍👧‍👦 Family</span>
-        <span class="inline-block bg-yellow-100 text-yellow-700 text-xs px-2 py-0.5 rounded-full font-medium">Rolling (Quarterly)</span>
+        <span class="text-xs font-bold uppercase tracking-wider text-sky-600">💙 Family</span>
+        <span class="inline-block bg-amber-100 text-amber-800 text-xs px-2 py-0.5 rounded-full font-medium">Rolling (Quarterly)</span>
     </div>
-    <a href="grants/act-today-autism-care-grant.html" class="block">
-        <h3 class="text-lg font-bold text-gray-900 hover:text-blue-700 transition">ACT Today! Autism Care Grant</h3>
+    <a href="grants/act-today-autism-care-grant.html" class="block group">
+        <h3 class="text-lg font-bold text-gray-900 group-hover:text-teal-700 transition">ACT Today! Autism Care Grant</h3>
     </a>
     <div class="flex gap-4 mt-2 text-sm text-gray-500">
         <span>ACT Today!</span>
         <span class="font-semibold text-gray-800">$5,000</span>
     </div>
     <p class="text-sm text-gray-600 mt-2">ACT Today! provides quarterly grants up to $5,000 to help families access autism-related therapies including speech, OT,...</p>
-    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2">Families of children with autism. Priority given to households with income under $100,000. Funding covers ABA, speech therapy, OT, medications, and home safety devices.</p>
-    <div class="mt-3 flex gap-2">
-        <a href="grants/act-today-autism-care-grant.html" class="text-sm text-blue-600 hover:text-blue-800 font-medium">Details &rarr;</a>
-        <a href="https://act-today.org/apply-for-grant/apply-for-assistance/" target="_blank" rel="noopener" class="text-sm text-gray-400 hover:text-gray-600">Source &nearr;</a>
+    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2 border border-gray-100">Families of children with autism. Priority given to households with income under $100,000. Funding covers ABA, speech therapy, OT, medications, and home safety devices.</p>
+    <div class="mt-4 pt-3 border-t border-gray-50 flex justify-between items-center">
+        <a href="grants/act-today-autism-care-grant.html" class="text-sm text-teal-700 hover:text-teal-900 font-medium bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded transition">View Details</a>
+        <a href="https://act-today.org/apply-for-grant/apply-for-assistance/" target="_blank" rel="noopener" class="text-xs text-gray-400 hover:text-gray-600">Official Site &nearr;</a>
     </div>
 </div>
-<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-pink-500" data-niche="Family" data-title="apply for a grant">
+<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 border-l-4 border-l-sky-500" data-niche="Family" data-title="apply for a grant">
     <div class="flex items-center justify-between mb-2">
-        <span class="text-xs font-bold uppercase tracking-wider text-pink-600">👨‍👩‍👧‍👦 Family</span>
-        <span class="inline-block bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full font-medium">Rolling</span>
+        <span class="text-xs font-bold uppercase tracking-wider text-sky-600">💙 Family</span>
+        <span class="inline-block bg-emerald-100 text-emerald-700 text-xs px-2 py-0.5 rounded-full font-medium">Rolling</span>
     </div>
-    <a href="grants/apply-for-a-grant.html" class="block">
-        <h3 class="text-lg font-bold text-gray-900 hover:text-blue-700 transition">Apply for a Grant</h3>
+    <a href="grants/apply-for-a-grant.html" class="block group">
+        <h3 class="text-lg font-bold text-gray-900 group-hover:text-teal-700 transition">Apply for a Grant</h3>
     </a>
     <div class="flex gap-4 mt-2 text-sm text-gray-500">
         <span>UHCCF</span>
         <span class="font-semibold text-gray-800">$170,000</span>
     </div>
     <p class="text-sm text-gray-600 mt-2">Did you know you don’t have to be a UnitedHealthcare member to apply for a life-changing UHCCF medical grant? Learn who ...</p>
-    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2">and required documentation</p>
-    <div class="mt-3 flex gap-2">
-        <a href="grants/apply-for-a-grant.html" class="text-sm text-blue-600 hover:text-blue-800 font-medium">Details &rarr;</a>
-        <a href="https://www.uhccf.org/apply-for-a-grant/" target="_blank" rel="noopener" class="text-sm text-gray-400 hover:text-gray-600">Source &nearr;</a>
+    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2 border border-gray-100">and required documentation</p>
+    <div class="mt-4 pt-3 border-t border-gray-50 flex justify-between items-center">
+        <a href="grants/apply-for-a-grant.html" class="text-sm text-teal-700 hover:text-teal-900 font-medium bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded transition">View Details</a>
+        <a href="https://www.uhccf.org/apply-for-a-grant/" target="_blank" rel="noopener" class="text-xs text-gray-400 hover:text-gray-600">Official Site &nearr;</a>
     </div>
 </div>
-<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-pink-500" data-niche="Family" data-title="autism care today quarterly assistance">
+<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 border-l-4 border-l-sky-500" data-niche="Family" data-title="autism care today quarterly assistance">
     <div class="flex items-center justify-between mb-2">
-        <span class="text-xs font-bold uppercase tracking-wider text-pink-600">👨‍👩‍👧‍👦 Family</span>
-        <span class="inline-block bg-yellow-100 text-yellow-700 text-xs px-2 py-0.5 rounded-full font-medium">Rolling (Quarterly)</span>
+        <span class="text-xs font-bold uppercase tracking-wider text-sky-600">💙 Family</span>
+        <span class="inline-block bg-amber-100 text-amber-800 text-xs px-2 py-0.5 rounded-full font-medium">Rolling (Quarterly)</span>
     </div>
-    <a href="grants/autism-care-today-quarterly-assistance.html" class="block">
-        <h3 class="text-lg font-bold text-gray-900 hover:text-blue-700 transition">Autism Care Today Quarterly Assistance</h3>
+    <a href="grants/autism-care-today-quarterly-assistance.html" class="block group">
+        <h3 class="text-lg font-bold text-gray-900 group-hover:text-teal-700 transition">Autism Care Today Quarterly Assistance</h3>
     </a>
     <div class="flex gap-4 mt-2 text-sm text-gray-500">
         <span>Autism Care Today</span>
         <span class="font-semibold text-gray-800">$5,000</span>
     </div>
     <p class="text-sm text-gray-600 mt-2">Provides quarterly financial assistance by directly paying a child's therapy provider for ABA, speech, OT, and other aut...</p>
-    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2">Families of children diagnosed with autism spectrum disorder. Funds are paid directly to the child's service provider.</p>
-    <div class="mt-3 flex gap-2">
-        <a href="grants/autism-care-today-quarterly-assistance.html" class="text-sm text-blue-600 hover:text-blue-800 font-medium">Details &rarr;</a>
-        <a href="https://www.autismcaretoday.org" target="_blank" rel="noopener" class="text-sm text-gray-400 hover:text-gray-600">Source &nearr;</a>
+    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2 border border-gray-100">Families of children diagnosed with autism spectrum disorder. Funds are paid directly to the child's service provider.</p>
+    <div class="mt-4 pt-3 border-t border-gray-50 flex justify-between items-center">
+        <a href="grants/autism-care-today-quarterly-assistance.html" class="text-sm text-teal-700 hover:text-teal-900 font-medium bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded transition">View Details</a>
+        <a href="https://www.autismcaretoday.org" target="_blank" rel="noopener" class="text-xs text-gray-400 hover:text-gray-600">Official Site &nearr;</a>
     </div>
 </div>
-<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-pink-500" data-niche="Family" data-title="maggie welby family grant">
+<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 border-l-4 border-l-sky-500" data-niche="Family" data-title="maggie welby family grant">
     <div class="flex items-center justify-between mb-2">
-        <span class="text-xs font-bold uppercase tracking-wider text-pink-600">👨‍👩‍👧‍👦 Family</span>
-        <span class="inline-block bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full font-medium">Rolling</span>
+        <span class="text-xs font-bold uppercase tracking-wider text-sky-600">💙 Family</span>
+        <span class="inline-block bg-emerald-100 text-emerald-700 text-xs px-2 py-0.5 rounded-full font-medium">Rolling</span>
     </div>
-    <a href="grants/maggie-welby-family-grant.html" class="block">
-        <h3 class="text-lg font-bold text-gray-900 hover:text-blue-700 transition">Maggie Welby Family Grant</h3>
+    <a href="grants/maggie-welby-family-grant.html" class="block group">
+        <h3 class="text-lg font-bold text-gray-900 group-hover:text-teal-700 transition">Maggie Welby Family Grant</h3>
     </a>
     <div class="flex gap-4 mt-2 text-sm text-gray-500">
         <span>Maggie Welby Foundation</span>
         <span class="font-semibold text-gray-800">Varies</span>
     </div>
     <p class="text-sm text-gray-600 mt-2">Offers grants for children and families that have a financial need, including therapy services, medical needs, adaptive ...</p>
-    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2">Children and families with financial need for medical, therapeutic, athletic, or educational opportunities.</p>
-    <div class="mt-3 flex gap-2">
-        <a href="grants/maggie-welby-family-grant.html" class="text-sm text-blue-600 hover:text-blue-800 font-medium">Details &rarr;</a>
-        <a href="https://www.maggiewelbyfoundation.org" target="_blank" rel="noopener" class="text-sm text-gray-400 hover:text-gray-600">Source &nearr;</a>
+    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2 border border-gray-100">Children and families with financial need for medical, therapeutic, athletic, or educational opportunities.</p>
+    <div class="mt-4 pt-3 border-t border-gray-50 flex justify-between items-center">
+        <a href="grants/maggie-welby-family-grant.html" class="text-sm text-teal-700 hover:text-teal-900 font-medium bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded transition">View Details</a>
+        <a href="https://www.maggiewelbyfoundation.org" target="_blank" rel="noopener" class="text-xs text-gray-400 hover:text-gray-600">Official Site &nearr;</a>
     </div>
 </div>
-<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-pink-500" data-niche="Family" data-title="orange effect speech therapy grant">
+<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 border-l-4 border-l-sky-500" data-niche="Family" data-title="orange effect speech therapy grant">
     <div class="flex items-center justify-between mb-2">
-        <span class="text-xs font-bold uppercase tracking-wider text-pink-600">👨‍👩‍👧‍👦 Family</span>
-        <span class="inline-block bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full font-medium">Rolling</span>
+        <span class="text-xs font-bold uppercase tracking-wider text-sky-600">💙 Family</span>
+        <span class="inline-block bg-emerald-100 text-emerald-700 text-xs px-2 py-0.5 rounded-full font-medium">Rolling</span>
     </div>
-    <a href="grants/orange-effect-speech-therapy-grant.html" class="block">
-        <h3 class="text-lg font-bold text-gray-900 hover:text-blue-700 transition">Orange Effect Speech Therapy Grant</h3>
+    <a href="grants/orange-effect-speech-therapy-grant.html" class="block group">
+        <h3 class="text-lg font-bold text-gray-900 group-hover:text-teal-700 transition">Orange Effect Speech Therapy Grant</h3>
     </a>
     <div class="flex gap-4 mt-2 text-sm text-gray-500">
         <span>The Orange Effect Foundation</span>
         <span class="font-semibold text-gray-800">$1,000</span>
     </div>
     <p class="text-sm text-gray-600 mt-2">The Orange Effect Foundation funds speech therapy sessions and communication technology (AAC devices) for individuals wh...</p>
-    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2">Children and adults who need speech therapy or communication devices. Must demonstrate financial need. Funds go directly to the service provider.</p>
-    <div class="mt-3 flex gap-2">
-        <a href="grants/orange-effect-speech-therapy-grant.html" class="text-sm text-blue-600 hover:text-blue-800 font-medium">Details &rarr;</a>
-        <a href="https://theorangeeffect.org/grant-application/" target="_blank" rel="noopener" class="text-sm text-gray-400 hover:text-gray-600">Source &nearr;</a>
+    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2 border border-gray-100">Children and adults who need speech therapy or communication devices. Must demonstrate financial need. Funds go directly to the service provider.</p>
+    <div class="mt-4 pt-3 border-t border-gray-50 flex justify-between items-center">
+        <a href="grants/orange-effect-speech-therapy-grant.html" class="text-sm text-teal-700 hover:text-teal-900 font-medium bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded transition">View Details</a>
+        <a href="https://theorangeeffect.org/grant-application/" target="_blank" rel="noopener" class="text-xs text-gray-400 hover:text-gray-600">Official Site &nearr;</a>
     </div>
 </div>
-<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-pink-500" data-niche="Family" data-title="small steps in speech therapy grant">
+<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 border-l-4 border-l-sky-500" data-niche="Family" data-title="small steps in speech therapy grant">
     <div class="flex items-center justify-between mb-2">
-        <span class="text-xs font-bold uppercase tracking-wider text-pink-600">👨‍👩‍👧‍👦 Family</span>
-        <span class="inline-block bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full font-medium">Rolling</span>
+        <span class="text-xs font-bold uppercase tracking-wider text-sky-600">💙 Family</span>
+        <span class="inline-block bg-emerald-100 text-emerald-700 text-xs px-2 py-0.5 rounded-full font-medium">Rolling</span>
     </div>
-    <a href="grants/small-steps-in-speech-therapy-grant.html" class="block">
-        <h3 class="text-lg font-bold text-gray-900 hover:text-blue-700 transition">Small Steps in Speech Therapy Grant</h3>
+    <a href="grants/small-steps-in-speech-therapy-grant.html" class="block group">
+        <h3 class="text-lg font-bold text-gray-900 group-hover:text-teal-700 transition">Small Steps in Speech Therapy Grant</h3>
     </a>
     <div class="flex gap-4 mt-2 text-sm text-gray-500">
         <span>Small Steps in Speech</span>
         <span class="font-semibold text-gray-800">$2,500</span>
     </div>
     <p class="text-sm text-gray-600 mt-2">Provides grants specifically for speech therapy and communication needs for children whose families face financial barri...</p>
-    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2">Families with children who need speech therapy services. Must demonstrate financial need.</p>
-    <div class="mt-3 flex gap-2">
-        <a href="grants/small-steps-in-speech-therapy-grant.html" class="text-sm text-blue-600 hover:text-blue-800 font-medium">Details &rarr;</a>
-        <a href="https://smallstepsinspeech.org" target="_blank" rel="noopener" class="text-sm text-gray-400 hover:text-gray-600">Source &nearr;</a>
+    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2 border border-gray-100">Families with children who need speech therapy services. Must demonstrate financial need.</p>
+    <div class="mt-4 pt-3 border-t border-gray-50 flex justify-between items-center">
+        <a href="grants/small-steps-in-speech-therapy-grant.html" class="text-sm text-teal-700 hover:text-teal-900 font-medium bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded transition">View Details</a>
+        <a href="https://smallstepsinspeech.org" target="_blank" rel="noopener" class="text-xs text-gray-400 hover:text-gray-600">Official Site &nearr;</a>
     </div>
 </div>
-<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-pink-500" data-niche="Family" data-title="special angels foundation grant">
+<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 border-l-4 border-l-sky-500" data-niche="Family" data-title="special angels foundation grant">
     <div class="flex items-center justify-between mb-2">
-        <span class="text-xs font-bold uppercase tracking-wider text-pink-600">👨‍👩‍👧‍👦 Family</span>
-        <span class="inline-block bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full font-medium">Rolling</span>
+        <span class="text-xs font-bold uppercase tracking-wider text-sky-600">💙 Family</span>
+        <span class="inline-block bg-emerald-100 text-emerald-700 text-xs px-2 py-0.5 rounded-full font-medium">Rolling</span>
     </div>
-    <a href="grants/special-angels-foundation-grant.html" class="block">
-        <h3 class="text-lg font-bold text-gray-900 hover:text-blue-700 transition">Special Angels Foundation Grant</h3>
+    <a href="grants/special-angels-foundation-grant.html" class="block group">
+        <h3 class="text-lg font-bold text-gray-900 group-hover:text-teal-700 transition">Special Angels Foundation Grant</h3>
     </a>
     <div class="flex gap-4 mt-2 text-sm text-gray-500">
         <span>Special Angels Foundation</span>
         <span class="font-semibold text-gray-800">Varies</span>
     </div>
     <p class="text-sm text-gray-600 mt-2">Provides grants for children with special needs including therapy services, adaptive equipment, and medical support that...</p>
-    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2">Children with special needs requiring therapy, equipment, or medical services not covered by insurance.</p>
-    <div class="mt-3 flex gap-2">
-        <a href="grants/special-angels-foundation-grant.html" class="text-sm text-blue-600 hover:text-blue-800 font-medium">Details &rarr;</a>
-        <a href="https://www.specialangelsfoundation.org" target="_blank" rel="noopener" class="text-sm text-gray-400 hover:text-gray-600">Source &nearr;</a>
+    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2 border border-gray-100">Children with special needs requiring therapy, equipment, or medical services not covered by insurance.</p>
+    <div class="mt-4 pt-3 border-t border-gray-50 flex justify-between items-center">
+        <a href="grants/special-angels-foundation-grant.html" class="text-sm text-teal-700 hover:text-teal-900 font-medium bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded transition">View Details</a>
+        <a href="https://www.specialangelsfoundation.org" target="_blank" rel="noopener" class="text-xs text-gray-400 hover:text-gray-600">Official Site &nearr;</a>
     </div>
 </div>
-<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-pink-500" data-niche="Family" data-title="supportnow therapy grant directory">
+<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 border-l-4 border-l-sky-500" data-niche="Family" data-title="supportnow therapy grant directory">
     <div class="flex items-center justify-between mb-2">
-        <span class="text-xs font-bold uppercase tracking-wider text-pink-600">👨‍👩‍👧‍👦 Family</span>
-        <span class="inline-block bg-yellow-100 text-yellow-700 text-xs px-2 py-0.5 rounded-full font-medium">Varies</span>
+        <span class="text-xs font-bold uppercase tracking-wider text-sky-600">💙 Family</span>
+        <span class="inline-block bg-amber-100 text-amber-800 text-xs px-2 py-0.5 rounded-full font-medium">Varies</span>
     </div>
-    <a href="grants/supportnow-therapy-grant-directory.html" class="block">
-        <h3 class="text-lg font-bold text-gray-900 hover:text-blue-700 transition">SupportNow Therapy Grant Directory</h3>
+    <a href="grants/supportnow-therapy-grant-directory.html" class="block group">
+        <h3 class="text-lg font-bold text-gray-900 group-hover:text-teal-700 transition">SupportNow Therapy Grant Directory</h3>
     </a>
     <div class="flex gap-4 mt-2 text-sm text-gray-500">
         <span>NAPA Center / SupportNow</span>
         <span class="font-semibold text-gray-800">Varies</span>
     </div>
     <p class="text-sm text-gray-600 mt-2">A comprehensive, regularly updated directory of active therapy grant programs across the US. Includes a free Fundraising...</p>
-    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2">Families seeking therapy funding. SupportNow provides a curated directory of active grants plus a free Fundraising Consultant.</p>
-    <div class="mt-3 flex gap-2">
-        <a href="grants/supportnow-therapy-grant-directory.html" class="text-sm text-blue-600 hover:text-blue-800 font-medium">Details &rarr;</a>
-        <a href="https://grants.supportnow.org/lists/napa-center-us-active-therapy-grant-programs" target="_blank" rel="noopener" class="text-sm text-gray-400 hover:text-gray-600">Source &nearr;</a>
+    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2 border border-gray-100">Families seeking therapy funding. SupportNow provides a curated directory of active grants plus a free Fundraising Consultant.</p>
+    <div class="mt-4 pt-3 border-t border-gray-50 flex justify-between items-center">
+        <a href="grants/supportnow-therapy-grant-directory.html" class="text-sm text-teal-700 hover:text-teal-900 font-medium bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded transition">View Details</a>
+        <a href="https://grants.supportnow.org/lists/napa-center-us-active-therapy-grant-programs" target="_blank" rel="noopener" class="text-xs text-gray-400 hover:text-gray-600">Official Site &nearr;</a>
     </div>
 </div>
-<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-pink-500" data-niche="Family" data-title="uhccf medical grant for children">
+<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 border-l-4 border-l-sky-500" data-niche="Family" data-title="uhccf medical grant for children">
     <div class="flex items-center justify-between mb-2">
-        <span class="text-xs font-bold uppercase tracking-wider text-pink-600">👨‍👩‍👧‍👦 Family</span>
-        <span class="inline-block bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full font-medium">Rolling</span>
+        <span class="text-xs font-bold uppercase tracking-wider text-sky-600">💙 Family</span>
+        <span class="inline-block bg-emerald-100 text-emerald-700 text-xs px-2 py-0.5 rounded-full font-medium">Rolling</span>
     </div>
-    <a href="grants/uhccf-medical-grant-for-children.html" class="block">
-        <h3 class="text-lg font-bold text-gray-900 hover:text-blue-700 transition">UHCCF Medical Grant for Children</h3>
+    <a href="grants/uhccf-medical-grant-for-children.html" class="block group">
+        <h3 class="text-lg font-bold text-gray-900 group-hover:text-teal-700 transition">UHCCF Medical Grant for Children</h3>
     </a>
     <div class="flex gap-4 mt-2 text-sm text-gray-500">
         <span>UnitedHealthcare Children's Foundation</span>
         <span class="font-semibold text-gray-800">$5,000</span>
     </div>
     <p class="text-sm text-gray-600 mt-2">UHCCF provides grants to help children access medical services including speech therapy, occupational therapy, and physi...</p>
-    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2">Families with children who need health-related services not covered or not fully covered by commercial health insurance. Up to $5,000/year per child ($10,000 lifetime max). Do NOT need UnitedHealthcare insurance.</p>
-    <div class="mt-3 flex gap-2">
-        <a href="grants/uhccf-medical-grant-for-children.html" class="text-sm text-blue-600 hover:text-blue-800 font-medium">Details &rarr;</a>
-        <a href="https://www.uhccf.org/apply-for-a-grant/" target="_blank" rel="noopener" class="text-sm text-gray-400 hover:text-gray-600">Source &nearr;</a>
+    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2 border border-gray-100">Families with children who need health-related services not covered or not fully covered by commercial health insurance. Up to $5,000/year per child ($10,000 lifetime max). Do NOT need UnitedHealthcare insurance.</p>
+    <div class="mt-4 pt-3 border-t border-gray-50 flex justify-between items-center">
+        <a href="grants/uhccf-medical-grant-for-children.html" class="text-sm text-teal-700 hover:text-teal-900 font-medium bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded transition">View Details</a>
+        <a href="https://www.uhccf.org/apply-for-a-grant/" target="_blank" rel="noopener" class="text-xs text-gray-400 hover:text-gray-600">Official Site &nearr;</a>
     </div>
 </div>
-<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-pink-500" data-niche="Family" data-title="variety children's grant">
+<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 border-l-4 border-l-sky-500" data-niche="Family" data-title="variety children's grant">
     <div class="flex items-center justify-between mb-2">
-        <span class="text-xs font-bold uppercase tracking-wider text-pink-600">👨‍👩‍👧‍👦 Family</span>
-        <span class="inline-block bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full font-medium">Rolling</span>
+        <span class="text-xs font-bold uppercase tracking-wider text-sky-600">💙 Family</span>
+        <span class="inline-block bg-emerald-100 text-emerald-700 text-xs px-2 py-0.5 rounded-full font-medium">Rolling</span>
     </div>
-    <a href="grants/variety-children-s-grant.html" class="block">
-        <h3 class="text-lg font-bold text-gray-900 hover:text-blue-700 transition">Variety Children's Grant</h3>
+    <a href="grants/variety-children-s-grant.html" class="block group">
+        <h3 class="text-lg font-bold text-gray-900 group-hover:text-teal-700 transition">Variety Children's Grant</h3>
     </a>
     <div class="flex gap-4 mt-2 text-sm text-gray-500">
         <span>Variety - The Children's Charity</span>
         <span class="font-semibold text-gray-800">$5,000</span>
     </div>
     <p class="text-sm text-gray-600 mt-2">Empowers children with special needs by funding therapy, adaptive equipment, and mobility devices. Has state chapters ac...</p>
-    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2">Children with special needs through age 21. Up to $5,000/year with a $10,000 lifetime max. State chapters across the US.</p>
-    <div class="mt-3 flex gap-2">
-        <a href="grants/variety-children-s-grant.html" class="text-sm text-blue-600 hover:text-blue-800 font-medium">Details &rarr;</a>
-        <a href="https://usvariety.org" target="_blank" rel="noopener" class="text-sm text-gray-400 hover:text-gray-600">Source &nearr;</a>
+    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2 border border-gray-100">Children with special needs through age 21. Up to $5,000/year with a $10,000 lifetime max. State chapters across the US.</p>
+    <div class="mt-4 pt-3 border-t border-gray-50 flex justify-between items-center">
+        <a href="grants/variety-children-s-grant.html" class="text-sm text-teal-700 hover:text-teal-900 font-medium bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded transition">View Details</a>
+        <a href="https://usvariety.org" target="_blank" rel="noopener" class="text-xs text-gray-400 hover:text-gray-600">Official Site &nearr;</a>
     </div>
 </div>
-<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-orange-500" data-niche="OT" data-title="aotf-asht-ahtf's hand in hand grant">
+<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 border-l-4 border-l-orange-500" data-niche="OT" data-title="aotf-asht-ahtf's hand in hand grant">
     <div class="flex items-center justify-between mb-2">
         <span class="text-xs font-bold uppercase tracking-wider text-orange-600">🖐️ OT</span>
-        <span class="inline-block bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full font-medium">Rolling</span>
+        <span class="inline-block bg-emerald-100 text-emerald-700 text-xs px-2 py-0.5 rounded-full font-medium">Rolling</span>
     </div>
-    <a href="grants/aotf-asht-ahtf-s-hand-in-hand-grant.html" class="block">
-        <h3 class="text-lg font-bold text-gray-900 hover:text-blue-700 transition">AOTF-ASHT-AHTF's Hand in Hand Grant</h3>
+    <a href="grants/aotf-asht-ahtf-s-hand-in-hand-grant.html" class="block group">
+        <h3 class="text-lg font-bold text-gray-900 group-hover:text-teal-700 transition">AOTF-ASHT-AHTF's Hand in Hand Grant</h3>
     </a>
     <div class="flex gap-4 mt-2 text-sm text-gray-500">
         <span>AOTF</span>
         <span class="font-semibold text-gray-800">$50,000</span>
     </div>
     <p class="text-sm text-gray-600 mt-2">TheAmerican Occupational Therapy Foundation (AOTF), theAmerican Society of Hand Therapists (ASHT), and theAmerican Hand ...</p>
-    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2">to receive Foundation research grants and will provide assurance of its accountability and support for the project</p>
-    <div class="mt-3 flex gap-2">
-        <a href="grants/aotf-asht-ahtf-s-hand-in-hand-grant.html" class="text-sm text-blue-600 hover:text-blue-800 font-medium">Details &rarr;</a>
-        <a href="https://www.aotf.org/Grants/AOTF-ASHT-AHTFs-Hand-in-Hand-Grant" target="_blank" rel="noopener" class="text-sm text-gray-400 hover:text-gray-600">Source &nearr;</a>
+    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2 border border-gray-100">to receive Foundation research grants and will provide assurance of its accountability and support for the project</p>
+    <div class="mt-4 pt-3 border-t border-gray-50 flex justify-between items-center">
+        <a href="grants/aotf-asht-ahtf-s-hand-in-hand-grant.html" class="text-sm text-teal-700 hover:text-teal-900 font-medium bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded transition">View Details</a>
+        <a href="https://www.aotf.org/Grants/AOTF-ASHT-AHTFs-Hand-in-Hand-Grant" target="_blank" rel="noopener" class="text-xs text-gray-400 hover:text-gray-600">Official Site &nearr;</a>
     </div>
 </div>
-<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-orange-500" data-niche="OT" data-title="aotf/mjff occupational therapy in parkinson’s disease grant">
+<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 border-l-4 border-l-orange-500" data-niche="OT" data-title="aotf/mjff occupational therapy in parkinson’s disease grant">
     <div class="flex items-center justify-between mb-2">
         <span class="text-xs font-bold uppercase tracking-wider text-orange-600">🖐️ OT</span>
         
     </div>
-    <a href="grants/aotf-mjff-occupational-therapy-in-parkinson-s-disease-grant.html" class="block">
-        <h3 class="text-lg font-bold text-gray-900 hover:text-blue-700 transition">AOTF/MJFF Occupational Therapy in Parkinson’s Disease Grant</h3>
+    <a href="grants/aotf-mjff-occupational-therapy-in-parkinson-s-disease-grant.html" class="block group">
+        <h3 class="text-lg font-bold text-gray-900 group-hover:text-teal-700 transition">AOTF/MJFF Occupational Therapy in Parkinson’s Disease Grant</h3>
     </a>
     <div class="flex gap-4 mt-2 text-sm text-gray-500">
         <span>AOTF</span>
@@ -281,75 +298,75 @@
     </div>
     <p class="text-sm text-gray-600 mt-2">In 2020, the American Occupational Therapy Foundation and The Michael J. Fox Foundation (MJFF) for Parkinson's Research ...</p>
     
-    <div class="mt-3 flex gap-2">
-        <a href="grants/aotf-mjff-occupational-therapy-in-parkinson-s-disease-grant.html" class="text-sm text-blue-600 hover:text-blue-800 font-medium">Details &rarr;</a>
-        <a href="https://www.aotf.org/Grants/AOTF-MJFF-Occupational-Therapy-in-Parkinsons-Disease-Grant" target="_blank" rel="noopener" class="text-sm text-gray-400 hover:text-gray-600">Source &nearr;</a>
+    <div class="mt-4 pt-3 border-t border-gray-50 flex justify-between items-center">
+        <a href="grants/aotf-mjff-occupational-therapy-in-parkinson-s-disease-grant.html" class="text-sm text-teal-700 hover:text-teal-900 font-medium bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded transition">View Details</a>
+        <a href="https://www.aotf.org/Grants/AOTF-MJFF-Occupational-Therapy-in-Parkinsons-Disease-Grant" target="_blank" rel="noopener" class="text-xs text-gray-400 hover:text-gray-600">Official Site &nearr;</a>
     </div>
 </div>
-<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-orange-500" data-niche="OT" data-title="bonita kraft occupational therapy doctoral student scholarship">
+<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 border-l-4 border-l-orange-500" data-niche="OT" data-title="bonita kraft occupational therapy doctoral student scholarship">
     <div class="flex items-center justify-between mb-2">
         <span class="text-xs font-bold uppercase tracking-wider text-orange-600">🖐️ OT</span>
-        <span class="inline-block bg-yellow-100 text-yellow-700 text-xs px-2 py-0.5 rounded-full font-medium">February 20, 2026</span>
+        <span class="inline-block bg-amber-100 text-amber-800 text-xs px-2 py-0.5 rounded-full font-medium">February 20, 2026</span>
     </div>
-    <a href="grants/bonita-kraft-occupational-therapy-doctoral-student-scholarship.html" class="block">
-        <h3 class="text-lg font-bold text-gray-900 hover:text-blue-700 transition">Bonita Kraft Occupational Therapy Doctoral Student Scholarship</h3>
+    <a href="grants/bonita-kraft-occupational-therapy-doctoral-student-scholarship.html" class="block group">
+        <h3 class="text-lg font-bold text-gray-900 group-hover:text-teal-700 transition">Bonita Kraft Occupational Therapy Doctoral Student Scholarship</h3>
     </a>
     <div class="flex gap-4 mt-2 text-sm text-gray-500">
         <span>AOTF</span>
         <span class="font-semibold text-gray-800">$5,000</span>
     </div>
     <p class="text-sm text-gray-600 mt-2">The Bonita Kraft Occupational Therapy Doctoral Student Scholarship will support an occupational therapist doctoral candi...</p>
-    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2">, the applicant must:</p>
-    <div class="mt-3 flex gap-2">
-        <a href="grants/bonita-kraft-occupational-therapy-doctoral-student-scholarship.html" class="text-sm text-blue-600 hover:text-blue-800 font-medium">Details &rarr;</a>
-        <a href="https://www.aotf.org/Grants/Bonita-Kraft-Occupational-Therapy-Doctoral-Student-Scholarship" target="_blank" rel="noopener" class="text-sm text-gray-400 hover:text-gray-600">Source &nearr;</a>
+    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2 border border-gray-100">, the applicant must:</p>
+    <div class="mt-4 pt-3 border-t border-gray-50 flex justify-between items-center">
+        <a href="grants/bonita-kraft-occupational-therapy-doctoral-student-scholarship.html" class="text-sm text-teal-700 hover:text-teal-900 font-medium bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded transition">View Details</a>
+        <a href="https://www.aotf.org/Grants/Bonita-Kraft-Occupational-Therapy-Doctoral-Student-Scholarship" target="_blank" rel="noopener" class="text-xs text-gray-400 hover:text-gray-600">Official Site &nearr;</a>
     </div>
 </div>
-<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-orange-500" data-niche="OT" data-title="community engaged research grant">
+<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 border-l-4 border-l-orange-500" data-niche="OT" data-title="community engaged research grant">
     <div class="flex items-center justify-between mb-2">
         <span class="text-xs font-bold uppercase tracking-wider text-orange-600">🖐️ OT</span>
         
     </div>
-    <a href="grants/community-engaged-research-grant.html" class="block">
-        <h3 class="text-lg font-bold text-gray-900 hover:text-blue-700 transition">Community Engaged Research Grant</h3>
+    <a href="grants/community-engaged-research-grant.html" class="block group">
+        <h3 class="text-lg font-bold text-gray-900 group-hover:text-teal-700 transition">Community Engaged Research Grant</h3>
     </a>
     <div class="flex gap-4 mt-2 text-sm text-gray-500">
         <span>AOTF</span>
         <span class="font-semibold text-gray-800">$100,000</span>
     </div>
     <p class="text-sm text-gray-600 mt-2">The American Occupational Therapy Foundation (AOTF) is launching the Community Engaged Research Grant to support project...</p>
-    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2">to receive Foundation research grants and will provide assurance of its accountability and support for the project</p>
-    <div class="mt-3 flex gap-2">
-        <a href="grants/community-engaged-research-grant.html" class="text-sm text-blue-600 hover:text-blue-800 font-medium">Details &rarr;</a>
-        <a href="https://www.aotf.org/Grants/Community-Engaged-Research-Grant" target="_blank" rel="noopener" class="text-sm text-gray-400 hover:text-gray-600">Source &nearr;</a>
+    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2 border border-gray-100">to receive Foundation research grants and will provide assurance of its accountability and support for the project</p>
+    <div class="mt-4 pt-3 border-t border-gray-50 flex justify-between items-center">
+        <a href="grants/community-engaged-research-grant.html" class="text-sm text-teal-700 hover:text-teal-900 font-medium bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded transition">View Details</a>
+        <a href="https://www.aotf.org/Grants/Community-Engaged-Research-Grant" target="_blank" rel="noopener" class="text-xs text-gray-400 hover:text-gray-600">Official Site &nearr;</a>
     </div>
 </div>
-<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-orange-500" data-niche="OT" data-title="dr. a. jean ayres doctoral candidate scholarship">
+<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 border-l-4 border-l-orange-500" data-niche="OT" data-title="dr. a. jean ayres doctoral candidate scholarship">
     <div class="flex items-center justify-between mb-2">
         <span class="text-xs font-bold uppercase tracking-wider text-orange-600">🖐️ OT</span>
-        <span class="inline-block bg-yellow-100 text-yellow-700 text-xs px-2 py-0.5 rounded-full font-medium">February 20, 2026</span>
+        <span class="inline-block bg-amber-100 text-amber-800 text-xs px-2 py-0.5 rounded-full font-medium">February 20, 2026</span>
     </div>
-    <a href="grants/dr-a-jean-ayres-doctoral-candidate-scholarship.html" class="block">
-        <h3 class="text-lg font-bold text-gray-900 hover:text-blue-700 transition">Dr. A. Jean Ayres Doctoral Candidate Scholarship</h3>
+    <a href="grants/dr-a-jean-ayres-doctoral-candidate-scholarship.html" class="block group">
+        <h3 class="text-lg font-bold text-gray-900 group-hover:text-teal-700 transition">Dr. A. Jean Ayres Doctoral Candidate Scholarship</h3>
     </a>
     <div class="flex gap-4 mt-2 text-sm text-gray-500">
         <span>AOTF</span>
         <span class="font-semibold text-gray-800">$125,000</span>
     </div>
     <p class="text-sm text-gray-600 mt-2">This scholarship will support an emerging OT scientist conducting research in sensory integration and sensory processing...</p>
-    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2">, the applicant must:</p>
-    <div class="mt-3 flex gap-2">
-        <a href="grants/dr-a-jean-ayres-doctoral-candidate-scholarship.html" class="text-sm text-blue-600 hover:text-blue-800 font-medium">Details &rarr;</a>
-        <a href="https://www.aotf.org/Grants/Dr-A-Jean-Ayres-Doctoral-Candidate-Scholarship" target="_blank" rel="noopener" class="text-sm text-gray-400 hover:text-gray-600">Source &nearr;</a>
+    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2 border border-gray-100">, the applicant must:</p>
+    <div class="mt-4 pt-3 border-t border-gray-50 flex justify-between items-center">
+        <a href="grants/dr-a-jean-ayres-doctoral-candidate-scholarship.html" class="text-sm text-teal-700 hover:text-teal-900 font-medium bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded transition">View Details</a>
+        <a href="https://www.aotf.org/Grants/Dr-A-Jean-Ayres-Doctoral-Candidate-Scholarship" target="_blank" rel="noopener" class="text-xs text-gray-400 hover:text-gray-600">Official Site &nearr;</a>
     </div>
 </div>
-<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-orange-500" data-niche="OT" data-title="dr. carolyn baum cognitive function in daily life mentor award">
+<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 border-l-4 border-l-orange-500" data-niche="OT" data-title="dr. carolyn baum cognitive function in daily life mentor award">
     <div class="flex items-center justify-between mb-2">
         <span class="text-xs font-bold uppercase tracking-wider text-orange-600">🖐️ OT</span>
-        <span class="inline-block bg-yellow-100 text-yellow-700 text-xs px-2 py-0.5 rounded-full font-medium">November 7, 2025</span>
+        <span class="inline-block bg-amber-100 text-amber-800 text-xs px-2 py-0.5 rounded-full font-medium">November 7, 2025</span>
     </div>
-    <a href="grants/dr-carolyn-baum-cognitive-function-in-daily-life-mentor-award.html" class="block">
-        <h3 class="text-lg font-bold text-gray-900 hover:text-blue-700 transition">Dr. Carolyn Baum Cognitive Function in Daily Life Mentor Award</h3>
+    <a href="grants/dr-carolyn-baum-cognitive-function-in-daily-life-mentor-award.html" class="block group">
+        <h3 class="text-lg font-bold text-gray-900 group-hover:text-teal-700 transition">Dr. Carolyn Baum Cognitive Function in Daily Life Mentor Award</h3>
     </a>
     <div class="flex gap-4 mt-2 text-sm text-gray-500">
         <span>AOTF</span>
@@ -357,18 +374,18 @@
     </div>
     <p class="text-sm text-gray-600 mt-2">The Dr. Carolyn Baum Occupational Therapy and Functional Cognition Award is a mentor-based award to be given to an occup...</p>
     
-    <div class="mt-3 flex gap-2">
-        <a href="grants/dr-carolyn-baum-cognitive-function-in-daily-life-mentor-award.html" class="text-sm text-blue-600 hover:text-blue-800 font-medium">Details &rarr;</a>
-        <a href="https://www.aotf.org/Grants/Dr-Carolyn-Baum-Cognitive-Function-in-Daily-Life-Mentor-Award" target="_blank" rel="noopener" class="text-sm text-gray-400 hover:text-gray-600">Source &nearr;</a>
+    <div class="mt-4 pt-3 border-t border-gray-50 flex justify-between items-center">
+        <a href="grants/dr-carolyn-baum-cognitive-function-in-daily-life-mentor-award.html" class="text-sm text-teal-700 hover:text-teal-900 font-medium bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded transition">View Details</a>
+        <a href="https://www.aotf.org/Grants/Dr-Carolyn-Baum-Cognitive-Function-in-Daily-Life-Mentor-Award" target="_blank" rel="noopener" class="text-xs text-gray-400 hover:text-gray-600">Official Site &nearr;</a>
     </div>
 </div>
-<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-orange-500" data-niche="OT" data-title="health services research grant">
+<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 border-l-4 border-l-orange-500" data-niche="OT" data-title="health services research grant">
     <div class="flex items-center justify-between mb-2">
         <span class="text-xs font-bold uppercase tracking-wider text-orange-600">🖐️ OT</span>
         
     </div>
-    <a href="grants/health-services-research-grant.html" class="block">
-        <h3 class="text-lg font-bold text-gray-900 hover:text-blue-700 transition">Health Services Research Grant</h3>
+    <a href="grants/health-services-research-grant.html" class="block group">
+        <h3 class="text-lg font-bold text-gray-900 group-hover:text-teal-700 transition">Health Services Research Grant</h3>
     </a>
     <div class="flex gap-4 mt-2 text-sm text-gray-500">
         <span>AOTF</span>
@@ -376,208 +393,208 @@
     </div>
     <p class="text-sm text-gray-600 mt-2">The Health Services Research Grant program is made possible through a generous grant from</p>
     
-    <div class="mt-3 flex gap-2">
-        <a href="grants/health-services-research-grant.html" class="text-sm text-blue-600 hover:text-blue-800 font-medium">Details &rarr;</a>
-        <a href="https://www.aotf.org/Grants/Health-Services-Research-Grant" target="_blank" rel="noopener" class="text-sm text-gray-400 hover:text-gray-600">Source &nearr;</a>
+    <div class="mt-4 pt-3 border-t border-gray-50 flex justify-between items-center">
+        <a href="grants/health-services-research-grant.html" class="text-sm text-teal-700 hover:text-teal-900 font-medium bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded transition">View Details</a>
+        <a href="https://www.aotf.org/Grants/Health-Services-Research-Grant" target="_blank" rel="noopener" class="text-xs text-gray-400 hover:text-gray-600">Official Site &nearr;</a>
     </div>
 </div>
-<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-orange-500" data-niche="OT" data-title="implementation research grant">
+<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 border-l-4 border-l-orange-500" data-niche="OT" data-title="implementation research grant">
     <div class="flex items-center justify-between mb-2">
         <span class="text-xs font-bold uppercase tracking-wider text-orange-600">🖐️ OT</span>
         
     </div>
-    <a href="grants/implementation-research-grant.html" class="block">
-        <h3 class="text-lg font-bold text-gray-900 hover:text-blue-700 transition">Implementation Research Grant</h3>
+    <a href="grants/implementation-research-grant.html" class="block group">
+        <h3 class="text-lg font-bold text-gray-900 group-hover:text-teal-700 transition">Implementation Research Grant</h3>
     </a>
     <div class="flex gap-4 mt-2 text-sm text-gray-500">
         <span>AOTF</span>
         <span class="font-semibold text-gray-800">$100,000</span>
     </div>
     <p class="text-sm text-gray-600 mt-2">The Implementation Research Grant program is made possible through a generous grant from</p>
-    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2">to receive Foundation research grants and will provide assurance of its accountability and support for the project</p>
-    <div class="mt-3 flex gap-2">
-        <a href="grants/implementation-research-grant.html" class="text-sm text-blue-600 hover:text-blue-800 font-medium">Details &rarr;</a>
-        <a href="https://www.aotf.org/Grants/Implementation-Research-Grant" target="_blank" rel="noopener" class="text-sm text-gray-400 hover:text-gray-600">Source &nearr;</a>
+    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2 border border-gray-100">to receive Foundation research grants and will provide assurance of its accountability and support for the project</p>
+    <div class="mt-4 pt-3 border-t border-gray-50 flex justify-between items-center">
+        <a href="grants/implementation-research-grant.html" class="text-sm text-teal-700 hover:text-teal-900 font-medium bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded transition">View Details</a>
+        <a href="https://www.aotf.org/Grants/Implementation-Research-Grant" target="_blank" rel="noopener" class="text-xs text-gray-400 hover:text-gray-600">Official Site &nearr;</a>
     </div>
 </div>
-<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-orange-500" data-niche="OT" data-title="intervention research grant">
+<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 border-l-4 border-l-orange-500" data-niche="OT" data-title="intervention research grant">
     <div class="flex items-center justify-between mb-2">
         <span class="text-xs font-bold uppercase tracking-wider text-orange-600">🖐️ OT</span>
         
     </div>
-    <a href="grants/intervention-research-grant.html" class="block">
-        <h3 class="text-lg font-bold text-gray-900 hover:text-blue-700 transition">Intervention Research Grant</h3>
+    <a href="grants/intervention-research-grant.html" class="block group">
+        <h3 class="text-lg font-bold text-gray-900 group-hover:text-teal-700 transition">Intervention Research Grant</h3>
     </a>
     <div class="flex gap-4 mt-2 text-sm text-gray-500">
         <span>AOTF</span>
         <span class="font-semibold text-gray-800">$100,000</span>
     </div>
     <p class="text-sm text-gray-600 mt-2">The Intervention Research Grant program is made possible through generous grants from:</p>
-    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2">to receive Foundation research grants and will provide assurance of its accountability and support for the project</p>
-    <div class="mt-3 flex gap-2">
-        <a href="grants/intervention-research-grant.html" class="text-sm text-blue-600 hover:text-blue-800 font-medium">Details &rarr;</a>
-        <a href="https://www.aotf.org/Grants/Intervention-Research-Grant" target="_blank" rel="noopener" class="text-sm text-gray-400 hover:text-gray-600">Source &nearr;</a>
+    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2 border border-gray-100">to receive Foundation research grants and will provide assurance of its accountability and support for the project</p>
+    <div class="mt-4 pt-3 border-t border-gray-50 flex justify-between items-center">
+        <a href="grants/intervention-research-grant.html" class="text-sm text-teal-700 hover:text-teal-900 font-medium bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded transition">View Details</a>
+        <a href="https://www.aotf.org/Grants/Intervention-Research-Grant" target="_blank" rel="noopener" class="text-xs text-gray-400 hover:text-gray-600">Official Site &nearr;</a>
     </div>
 </div>
-<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-orange-500" data-niche="OT" data-title="kielhofner doctoral research scholarship">
+<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 border-l-4 border-l-orange-500" data-niche="OT" data-title="kielhofner doctoral research scholarship">
     <div class="flex items-center justify-between mb-2">
         <span class="text-xs font-bold uppercase tracking-wider text-orange-600">🖐️ OT</span>
-        <span class="inline-block bg-yellow-100 text-yellow-700 text-xs px-2 py-0.5 rounded-full font-medium">February 20, 2026</span>
+        <span class="inline-block bg-amber-100 text-amber-800 text-xs px-2 py-0.5 rounded-full font-medium">February 20, 2026</span>
     </div>
-    <a href="grants/kielhofner-doctoral-research-scholarship.html" class="block">
-        <h3 class="text-lg font-bold text-gray-900 hover:text-blue-700 transition">Kielhofner Doctoral Research Scholarship</h3>
+    <a href="grants/kielhofner-doctoral-research-scholarship.html" class="block group">
+        <h3 class="text-lg font-bold text-gray-900 group-hover:text-teal-700 transition">Kielhofner Doctoral Research Scholarship</h3>
     </a>
     <div class="flex gap-4 mt-2 text-sm text-gray-500">
         <span>AOTF</span>
         <span class="font-semibold text-gray-800">$5,000</span>
     </div>
     <p class="text-sm text-gray-600 mt-2">Research Scholarship for doctoral candidates</p>
-    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2">, the applicant must:</p>
-    <div class="mt-3 flex gap-2">
-        <a href="grants/kielhofner-doctoral-research-scholarship.html" class="text-sm text-blue-600 hover:text-blue-800 font-medium">Details &rarr;</a>
-        <a href="https://www.aotf.org/Grants/Kielhofner-Doctoral-Research-Scholarship" target="_blank" rel="noopener" class="text-sm text-gray-400 hover:text-gray-600">Source &nearr;</a>
+    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2 border border-gray-100">, the applicant must:</p>
+    <div class="mt-4 pt-3 border-t border-gray-50 flex justify-between items-center">
+        <a href="grants/kielhofner-doctoral-research-scholarship.html" class="text-sm text-teal-700 hover:text-teal-900 font-medium bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded transition">View Details</a>
+        <a href="https://www.aotf.org/Grants/Kielhofner-Doctoral-Research-Scholarship" target="_blank" rel="noopener" class="text-xs text-gray-400 hover:text-gray-600">Official Site &nearr;</a>
     </div>
 </div>
-<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-orange-500" data-niche="OT" data-title="lands banks memorial scholarship">
+<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 border-l-4 border-l-orange-500" data-niche="OT" data-title="lands banks memorial scholarship">
     <div class="flex items-center justify-between mb-2">
         <span class="text-xs font-bold uppercase tracking-wider text-orange-600">🖐️ OT</span>
-        <span class="inline-block bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full font-medium">Rolling</span>
+        <span class="inline-block bg-emerald-100 text-emerald-700 text-xs px-2 py-0.5 rounded-full font-medium">Rolling</span>
     </div>
-    <a href="grants/lands-banks-memorial-scholarship.html" class="block">
-        <h3 class="text-lg font-bold text-gray-900 hover:text-blue-700 transition">Lands Banks Memorial Scholarship</h3>
+    <a href="grants/lands-banks-memorial-scholarship.html" class="block group">
+        <h3 class="text-lg font-bold text-gray-900 group-hover:text-teal-700 transition">Lands Banks Memorial Scholarship</h3>
     </a>
     <div class="flex gap-4 mt-2 text-sm text-gray-500">
         <span>AOTF</span>
         <span class="font-semibold text-gray-800">$2,000</span>
     </div>
     <p class="text-sm text-gray-600 mt-2">On Sunday, July 9th, 2023, the Occupational Therapy profession lost a genuinely wonderful person and significant member ...</p>
-    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2">candidates must be pursuing an entry-level degree, i</p>
-    <div class="mt-3 flex gap-2">
-        <a href="grants/lands-banks-memorial-scholarship.html" class="text-sm text-blue-600 hover:text-blue-800 font-medium">Details &rarr;</a>
-        <a href="https://www.aotf.org/About-AOTF/News/lands-banks-memorial-scholarship" target="_blank" rel="noopener" class="text-sm text-gray-400 hover:text-gray-600">Source &nearr;</a>
+    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2 border border-gray-100">candidates must be pursuing an entry-level degree, i</p>
+    <div class="mt-4 pt-3 border-t border-gray-50 flex justify-between items-center">
+        <a href="grants/lands-banks-memorial-scholarship.html" class="text-sm text-teal-700 hover:text-teal-900 font-medium bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded transition">View Details</a>
+        <a href="https://www.aotf.org/About-AOTF/News/lands-banks-memorial-scholarship" target="_blank" rel="noopener" class="text-xs text-gray-400 hover:text-gray-600">Official Site &nearr;</a>
     </div>
 </div>
-<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-orange-500" data-niche="OT" data-title="mary j. bridle award">
+<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 border-l-4 border-l-orange-500" data-niche="OT" data-title="mary j. bridle award">
     <div class="flex items-center justify-between mb-2">
         <span class="text-xs font-bold uppercase tracking-wider text-orange-600">🖐️ OT</span>
         
     </div>
-    <a href="grants/mary-j-bridle-award.html" class="block">
-        <h3 class="text-lg font-bold text-gray-900 hover:text-blue-700 transition">Mary J. Bridle Award</h3>
+    <a href="grants/mary-j-bridle-award.html" class="block group">
+        <h3 class="text-lg font-bold text-gray-900 group-hover:text-teal-700 transition">Mary J. Bridle Award</h3>
     </a>
     <div class="flex gap-4 mt-2 text-sm text-gray-500">
         <span>AOTF</span>
         <span class="font-semibold text-gray-800">$2,500</span>
     </div>
     <p class="text-sm text-gray-600 mt-2">The award aims tofoster scholarship and first research efforts within the occupational therapy community of students, yo...</p>
-    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2">Any occupational therapy student, practitioner, or researcher who is a member in good standing of Pi Theta Epsilon may submit a manuscript provided th</p>
-    <div class="mt-3 flex gap-2">
-        <a href="grants/mary-j-bridle-award.html" class="text-sm text-blue-600 hover:text-blue-800 font-medium">Details &rarr;</a>
-        <a href="https://www.aotf.org/Pi-Theta-Epsilon/PTE-Awards/Mary-J-Bridle-Award" target="_blank" rel="noopener" class="text-sm text-gray-400 hover:text-gray-600">Source &nearr;</a>
+    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2 border border-gray-100">Any occupational therapy student, practitioner, or researcher who is a member in good standing of Pi Theta Epsilon may submit a manuscript provided th</p>
+    <div class="mt-4 pt-3 border-t border-gray-50 flex justify-between items-center">
+        <a href="grants/mary-j-bridle-award.html" class="text-sm text-teal-700 hover:text-teal-900 font-medium bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded transition">View Details</a>
+        <a href="https://www.aotf.org/Pi-Theta-Epsilon/PTE-Awards/Mary-J-Bridle-Award" target="_blank" rel="noopener" class="text-xs text-gray-400 hover:text-gray-600">Official Site &nearr;</a>
     </div>
 </div>
-<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-orange-500" data-niche="OT" data-title="nancy talbot postdoctoral research fellowship">
+<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 border-l-4 border-l-orange-500" data-niche="OT" data-title="nancy talbot postdoctoral research fellowship">
     <div class="flex items-center justify-between mb-2">
         <span class="text-xs font-bold uppercase tracking-wider text-orange-600">🖐️ OT</span>
-        <span class="inline-block bg-yellow-100 text-yellow-700 text-xs px-2 py-0.5 rounded-full font-medium">February 20, 2026</span>
+        <span class="inline-block bg-amber-100 text-amber-800 text-xs px-2 py-0.5 rounded-full font-medium">February 20, 2026</span>
     </div>
-    <a href="grants/nancy-talbot-postdoctoral-research-fellowship.html" class="block">
-        <h3 class="text-lg font-bold text-gray-900 hover:text-blue-700 transition">Nancy Talbot Postdoctoral Research Fellowship</h3>
+    <a href="grants/nancy-talbot-postdoctoral-research-fellowship.html" class="block group">
+        <h3 class="text-lg font-bold text-gray-900 group-hover:text-teal-700 transition">Nancy Talbot Postdoctoral Research Fellowship</h3>
     </a>
     <div class="flex gap-4 mt-2 text-sm text-gray-500">
         <span>AOTF</span>
         <span class="font-semibold text-gray-800">$30,000</span>
     </div>
     <p class="text-sm text-gray-600 mt-2">Fellowship in support of postdoctoral research training in occupational therapy</p>
-    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2">, the applicant must:</p>
-    <div class="mt-3 flex gap-2">
-        <a href="grants/nancy-talbot-postdoctoral-research-fellowship.html" class="text-sm text-blue-600 hover:text-blue-800 font-medium">Details &rarr;</a>
-        <a href="https://www.aotf.org/Grants/Nancy-Talbot-Postdoctoral-Research-Fellowship" target="_blank" rel="noopener" class="text-sm text-gray-400 hover:text-gray-600">Source &nearr;</a>
+    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2 border border-gray-100">, the applicant must:</p>
+    <div class="mt-4 pt-3 border-t border-gray-50 flex justify-between items-center">
+        <a href="grants/nancy-talbot-postdoctoral-research-fellowship.html" class="text-sm text-teal-700 hover:text-teal-900 font-medium bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded transition">View Details</a>
+        <a href="https://www.aotf.org/Grants/Nancy-Talbot-Postdoctoral-Research-Fellowship" target="_blank" rel="noopener" class="text-xs text-gray-400 hover:text-gray-600">Official Site &nearr;</a>
     </div>
 </div>
-<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-orange-500" data-niche="OT" data-title="nedra gillette endowed research fellowship">
+<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 border-l-4 border-l-orange-500" data-niche="OT" data-title="nedra gillette endowed research fellowship">
     <div class="flex items-center justify-between mb-2">
         <span class="text-xs font-bold uppercase tracking-wider text-orange-600">🖐️ OT</span>
-        <span class="inline-block bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full font-medium">Rolling</span>
+        <span class="inline-block bg-emerald-100 text-emerald-700 text-xs px-2 py-0.5 rounded-full font-medium">Rolling</span>
     </div>
-    <a href="grants/nedra-gillette-endowed-research-fellowship.html" class="block">
-        <h3 class="text-lg font-bold text-gray-900 hover:text-blue-700 transition">Nedra Gillette Endowed Research Fellowship</h3>
+    <a href="grants/nedra-gillette-endowed-research-fellowship.html" class="block group">
+        <h3 class="text-lg font-bold text-gray-900 group-hover:text-teal-700 transition">Nedra Gillette Endowed Research Fellowship</h3>
     </a>
     <div class="flex gap-4 mt-2 text-sm text-gray-500">
         <span>AOTF</span>
         <span class="font-semibold text-gray-800">$5,000</span>
     </div>
     <p class="text-sm text-gray-600 mt-2">To honor its namesake Nedra Gillette, the Nedra Gillette Endowed Research Fellowship award is in support of a postdoctor...</p>
-    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2">, the applicant must:</p>
-    <div class="mt-3 flex gap-2">
-        <a href="grants/nedra-gillette-endowed-research-fellowship.html" class="text-sm text-blue-600 hover:text-blue-800 font-medium">Details &rarr;</a>
-        <a href="https://www.aotf.org/Grants/Nedra-Gillette-Endowed-Research-Fellowship" target="_blank" rel="noopener" class="text-sm text-gray-400 hover:text-gray-600">Source &nearr;</a>
+    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2 border border-gray-100">, the applicant must:</p>
+    <div class="mt-4 pt-3 border-t border-gray-50 flex justify-between items-center">
+        <a href="grants/nedra-gillette-endowed-research-fellowship.html" class="text-sm text-teal-700 hover:text-teal-900 font-medium bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded transition">View Details</a>
+        <a href="https://www.aotf.org/Grants/Nedra-Gillette-Endowed-Research-Fellowship" target="_blank" rel="noopener" class="text-xs text-gray-400 hover:text-gray-600">Official Site &nearr;</a>
     </div>
 </div>
-<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-orange-500" data-niche="OT" data-title="research fellowships and scholarships close">
+<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 border-l-4 border-l-orange-500" data-niche="OT" data-title="research fellowships and scholarships close">
     <div class="flex items-center justify-between mb-2">
         <span class="text-xs font-bold uppercase tracking-wider text-orange-600">🖐️ OT</span>
-        <span class="inline-block bg-yellow-100 text-yellow-700 text-xs px-2 py-0.5 rounded-full font-medium">February 20, 2026</span>
+        <span class="inline-block bg-amber-100 text-amber-800 text-xs px-2 py-0.5 rounded-full font-medium">February 20, 2026</span>
     </div>
-    <a href="grants/research-fellowships-and-scholarships-close.html" class="block">
-        <h3 class="text-lg font-bold text-gray-900 hover:text-blue-700 transition">Research Fellowships and Scholarships Close</h3>
+    <a href="grants/research-fellowships-and-scholarships-close.html" class="block group">
+        <h3 class="text-lg font-bold text-gray-900 group-hover:text-teal-700 transition">Research Fellowships and Scholarships Close</h3>
     </a>
     <div class="flex gap-4 mt-2 text-sm text-gray-500">
         <span>AOTF</span>
         <span class="font-semibold text-gray-800">$10,000</span>
     </div>
     <p class="text-sm text-gray-600 mt-2">OT research funding including implementation, intervention and health services</p>
-    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2">PIs are generally at the Lecturer, Instructor, Assistant Professor, or early Associate Professor level (or equivalent)</p>
-    <div class="mt-3 flex gap-2">
-        <a href="grants/research-fellowships-and-scholarships-close.html" class="text-sm text-blue-600 hover:text-blue-800 font-medium">Details &rarr;</a>
-        <a href="https://www.aotf.org/Grants" target="_blank" rel="noopener" class="text-sm text-gray-400 hover:text-gray-600">Source &nearr;</a>
+    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2 border border-gray-100">PIs are generally at the Lecturer, Instructor, Assistant Professor, or early Associate Professor level (or equivalent)</p>
+    <div class="mt-4 pt-3 border-t border-gray-50 flex justify-between items-center">
+        <a href="grants/research-fellowships-and-scholarships-close.html" class="text-sm text-teal-700 hover:text-teal-900 font-medium bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded transition">View Details</a>
+        <a href="https://www.aotf.org/Grants" target="_blank" rel="noopener" class="text-xs text-gray-400 hover:text-gray-600">Official Site &nearr;</a>
     </div>
 </div>
-<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-orange-500" data-niche="OT" data-title="stride mentored research scholarship">
+<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 border-l-4 border-l-orange-500" data-niche="OT" data-title="stride mentored research scholarship">
     <div class="flex items-center justify-between mb-2">
         <span class="text-xs font-bold uppercase tracking-wider text-orange-600">🖐️ OT</span>
-        <span class="inline-block bg-yellow-100 text-yellow-700 text-xs px-2 py-0.5 rounded-full font-medium">July 7, 2025</span>
+        <span class="inline-block bg-amber-100 text-amber-800 text-xs px-2 py-0.5 rounded-full font-medium">July 7, 2025</span>
     </div>
-    <a href="grants/stride-mentored-research-scholarship.html" class="block">
-        <h3 class="text-lg font-bold text-gray-900 hover:text-blue-700 transition">STRIDE Mentored Research Scholarship</h3>
+    <a href="grants/stride-mentored-research-scholarship.html" class="block group">
+        <h3 class="text-lg font-bold text-gray-900 group-hover:text-teal-700 transition">STRIDE Mentored Research Scholarship</h3>
     </a>
     <div class="flex gap-4 mt-2 text-sm text-gray-500">
         <span>AOTF</span>
         <span class="font-semibold text-gray-800">$10,000</span>
     </div>
     <p class="text-sm text-gray-600 mt-2">The American Occupational Therapy Foundation (AOTF), standing for Research Inclusion, Diversity, and Equity (STRIDE) com...</p>
-    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2">Criteria:</p>
-    <div class="mt-3 flex gap-2">
-        <a href="grants/stride-mentored-research-scholarship.html" class="text-sm text-blue-600 hover:text-blue-800 font-medium">Details &rarr;</a>
-        <a href="https://www.aotf.org/Grants/STRIDE-Mentored-Research-Scholarship" target="_blank" rel="noopener" class="text-sm text-gray-400 hover:text-gray-600">Source &nearr;</a>
+    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2 border border-gray-100">Criteria:</p>
+    <div class="mt-4 pt-3 border-t border-gray-50 flex justify-between items-center">
+        <a href="grants/stride-mentored-research-scholarship.html" class="text-sm text-teal-700 hover:text-teal-900 font-medium bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded transition">View Details</a>
+        <a href="https://www.aotf.org/Grants/STRIDE-Mentored-Research-Scholarship" target="_blank" rel="noopener" class="text-xs text-gray-400 hover:text-gray-600">Official Site &nearr;</a>
     </div>
 </div>
-<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-green-500" data-niche="PT" data-title="postdoctoral fellowship">
+<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 border-l-4 border-l-green-500" data-niche="PT" data-title="postdoctoral fellowship">
     <div class="flex items-center justify-between mb-2">
         <span class="text-xs font-bold uppercase tracking-wider text-green-600">🏃 PT</span>
-        <span class="inline-block bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full font-medium">Rolling</span>
+        <span class="inline-block bg-emerald-100 text-emerald-700 text-xs px-2 py-0.5 rounded-full font-medium">Rolling</span>
     </div>
-    <a href="grants/postdoctoral-fellowship.html" class="block">
-        <h3 class="text-lg font-bold text-gray-900 hover:text-blue-700 transition">Postdoctoral Fellowship</h3>
+    <a href="grants/postdoctoral-fellowship.html" class="block group">
+        <h3 class="text-lg font-bold text-gray-900 group-hover:text-teal-700 transition">Postdoctoral Fellowship</h3>
     </a>
     <div class="flex gap-4 mt-2 text-sm text-gray-500">
         <span>Foundation4PT</span>
         <span class="font-semibold text-gray-800">$75,000</span>
     </div>
     <p class="text-sm text-gray-600 mt-2">Postdoctoral Fellowship Home › Funding Opportunities › Postdoctoral Fellowship What are the key 2026 dates? Edit January...</p>
-    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2">licensed physical therapists who are members of APTA and who have received an academic research doctoral degree on or after June 1, 2024</p>
-    <div class="mt-3 flex gap-2">
-        <a href="grants/postdoctoral-fellowship.html" class="text-sm text-blue-600 hover:text-blue-800 font-medium">Details &rarr;</a>
-        <a href="https://foundation4pt.org/foundation-funding-opportunities/postdoctoral-fellowship/" target="_blank" rel="noopener" class="text-sm text-gray-400 hover:text-gray-600">Source &nearr;</a>
+    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2 border border-gray-100">licensed physical therapists who are members of APTA and who have received an academic research doctoral degree on or after June 1, 2024</p>
+    <div class="mt-4 pt-3 border-t border-gray-50 flex justify-between items-center">
+        <a href="grants/postdoctoral-fellowship.html" class="text-sm text-teal-700 hover:text-teal-900 font-medium bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded transition">View Details</a>
+        <a href="https://foundation4pt.org/foundation-funding-opportunities/postdoctoral-fellowship/" target="_blank" rel="noopener" class="text-xs text-gray-400 hover:text-gray-600">Official Site &nearr;</a>
     </div>
 </div>
-<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-green-500" data-niche="PT" data-title="promotion of doctoral studies scholarships">
+<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 border-l-4 border-l-green-500" data-niche="PT" data-title="promotion of doctoral studies scholarships">
     <div class="flex items-center justify-between mb-2">
         <span class="text-xs font-bold uppercase tracking-wider text-green-600">🏃 PT</span>
-        <span class="inline-block bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full font-medium">Rolling</span>
+        <span class="inline-block bg-emerald-100 text-emerald-700 text-xs px-2 py-0.5 rounded-full font-medium">Rolling</span>
     </div>
-    <a href="grants/promotion-of-doctoral-studies-scholarships.html" class="block">
-        <h3 class="text-lg font-bold text-gray-900 hover:text-blue-700 transition">Promotion of Doctoral Studies Scholarships</h3>
+    <a href="grants/promotion-of-doctoral-studies-scholarships.html" class="block group">
+        <h3 class="text-lg font-bold text-gray-900 group-hover:text-teal-700 transition">Promotion of Doctoral Studies Scholarships</h3>
     </a>
     <div class="flex gap-4 mt-2 text-sm text-gray-500">
         <span>Foundation4PT</span>
@@ -585,18 +602,18 @@
     </div>
     <p class="text-sm text-gray-600 mt-2">Promotion of Doctoral Studies Scholarships Home › Funding Opportunities › Promotion of Doctoral Studies Scholarships Wha...</p>
     
-    <div class="mt-3 flex gap-2">
-        <a href="grants/promotion-of-doctoral-studies-scholarships.html" class="text-sm text-blue-600 hover:text-blue-800 font-medium">Details &rarr;</a>
-        <a href="https://foundation4pt.org/foundation-funding-opportunities/scholarships/" target="_blank" rel="noopener" class="text-sm text-gray-400 hover:text-gray-600">Source &nearr;</a>
+    <div class="mt-4 pt-3 border-t border-gray-50 flex justify-between items-center">
+        <a href="grants/promotion-of-doctoral-studies-scholarships.html" class="text-sm text-teal-700 hover:text-teal-900 font-medium bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded transition">View Details</a>
+        <a href="https://foundation4pt.org/foundation-funding-opportunities/scholarships/" target="_blank" rel="noopener" class="text-xs text-gray-400 hover:text-gray-600">Official Site &nearr;</a>
     </div>
 </div>
-<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-green-500" data-niche="PT" data-title="research grants">
+<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 border-l-4 border-l-green-500" data-niche="PT" data-title="research grants">
     <div class="flex items-center justify-between mb-2">
         <span class="text-xs font-bold uppercase tracking-wider text-green-600">🏃 PT</span>
-        <span class="inline-block bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full font-medium">Rolling</span>
+        <span class="inline-block bg-emerald-100 text-emerald-700 text-xs px-2 py-0.5 rounded-full font-medium">Rolling</span>
     </div>
-    <a href="grants/research-grants.html" class="block">
-        <h3 class="text-lg font-bold text-gray-900 hover:text-blue-700 transition">Research Grants</h3>
+    <a href="grants/research-grants.html" class="block group">
+        <h3 class="text-lg font-bold text-gray-900 group-hover:text-teal-700 transition">Research Grants</h3>
     </a>
     <div class="flex gap-4 mt-2 text-sm text-gray-500">
         <span>Foundation4PT</span>
@@ -604,227 +621,227 @@
     </div>
     <p class="text-sm text-gray-600 mt-2">Research Grants Home › Funding Opportunities › Research Grants What are the key 2026 dates? March 2Letters of Intent (LO...</p>
     
-    <div class="mt-3 flex gap-2">
-        <a href="grants/research-grants.html" class="text-sm text-blue-600 hover:text-blue-800 font-medium">Details &rarr;</a>
-        <a href="https://foundation4pt.org/foundation-funding-opportunities/grants/" target="_blank" rel="noopener" class="text-sm text-gray-400 hover:text-gray-600">Source &nearr;</a>
+    <div class="mt-4 pt-3 border-t border-gray-50 flex justify-between items-center">
+        <a href="grants/research-grants.html" class="text-sm text-teal-700 hover:text-teal-900 font-medium bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded transition">View Details</a>
+        <a href="https://foundation4pt.org/foundation-funding-opportunities/grants/" target="_blank" rel="noopener" class="text-xs text-gray-400 hover:text-gray-600">Official Site &nearr;</a>
     </div>
 </div>
-<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-purple-500" data-niche="SLP" data-title="artificial intelligence in communication sciences and disorders research grant">
+<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 border-l-4 border-l-purple-500" data-niche="SLP" data-title="artificial intelligence in communication sciences and disorders research grant">
     <div class="flex items-center justify-between mb-2">
         <span class="text-xs font-bold uppercase tracking-wider text-purple-600">🗣️ SLP</span>
-        <span class="inline-block bg-yellow-100 text-yellow-700 text-xs px-2 py-0.5 rounded-full font-medium">December 31, 2027</span>
+        <span class="inline-block bg-amber-100 text-amber-800 text-xs px-2 py-0.5 rounded-full font-medium">December 31, 2027</span>
     </div>
-    <a href="grants/artificial-intelligence-in-communication-sciences-and-disorders-research-grant.html" class="block">
-        <h3 class="text-lg font-bold text-gray-900 hover:text-blue-700 transition">Artificial Intelligence in Communication Sciences and Disorders Research Grant</h3>
+    <a href="grants/artificial-intelligence-in-communication-sciences-and-disorders-research-grant.html" class="block group">
+        <h3 class="text-lg font-bold text-gray-900 group-hover:text-teal-700 transition">Artificial Intelligence in Communication Sciences and Disorders Research Grant</h3>
     </a>
     <div class="flex gap-4 mt-2 text-sm text-gray-500">
         <span>ASHFoundation</span>
         <span class="font-semibold text-gray-800">$50,000</span>
     </div>
     <p class="text-sm text-gray-600 mt-2">The Artificial Intelligence in Communication Sciences and Disorders Research Grant supports interdisciplinary studies th...</p>
-    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2">Investigators/collaborators include the following:</p>
-    <div class="mt-3 flex gap-2">
-        <a href="grants/artificial-intelligence-in-communication-sciences-and-disorders-research-grant.html" class="text-sm text-blue-600 hover:text-blue-800 font-medium">Details &rarr;</a>
-        <a href="https://www.ashfoundation.org/apply/artificial-intelligence-in-communication-sciences-and-disorders-research-grant/" target="_blank" rel="noopener" class="text-sm text-gray-400 hover:text-gray-600">Source &nearr;</a>
+    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2 border border-gray-100">Investigators/collaborators include the following:</p>
+    <div class="mt-4 pt-3 border-t border-gray-50 flex justify-between items-center">
+        <a href="grants/artificial-intelligence-in-communication-sciences-and-disorders-research-grant.html" class="text-sm text-teal-700 hover:text-teal-900 font-medium bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded transition">View Details</a>
+        <a href="https://www.ashfoundation.org/apply/artificial-intelligence-in-communication-sciences-and-disorders-research-grant/" target="_blank" rel="noopener" class="text-xs text-gray-400 hover:text-gray-600">Official Site &nearr;</a>
     </div>
 </div>
-<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-purple-500" data-niche="SLP" data-title="graduate student scholarship">
+<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 border-l-4 border-l-purple-500" data-niche="SLP" data-title="graduate student scholarship">
     <div class="flex items-center justify-between mb-2">
         <span class="text-xs font-bold uppercase tracking-wider text-purple-600">🗣️ SLP</span>
         
     </div>
-    <a href="grants/graduate-student-scholarship.html" class="block">
-        <h3 class="text-lg font-bold text-gray-900 hover:text-blue-700 transition">Graduate Student Scholarship</h3>
+    <a href="grants/graduate-student-scholarship.html" class="block group">
+        <h3 class="text-lg font-bold text-gray-900 group-hover:text-teal-700 transition">Graduate Student Scholarship</h3>
     </a>
     <div class="flex gap-4 mt-2 text-sm text-gray-500">
         <span>ASHFoundation</span>
         <span class="font-semibold text-gray-800">$5,000</span>
     </div>
     <p class="text-sm text-gray-600 mt-2">The American Speech-Language-Hearing Foundation (ASHFoundation) invites full-time students who will be or who are curren...</p>
-    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2">Applicants must meet the following criteria to be eligible for the Graduate Student Scholarship</p>
-    <div class="mt-3 flex gap-2">
-        <a href="grants/graduate-student-scholarship.html" class="text-sm text-blue-600 hover:text-blue-800 font-medium">Details &rarr;</a>
-        <a href="https://www.ashfoundation.org/apply/graduate-student-scholarship/" target="_blank" rel="noopener" class="text-sm text-gray-400 hover:text-gray-600">Source &nearr;</a>
+    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2 border border-gray-100">Applicants must meet the following criteria to be eligible for the Graduate Student Scholarship</p>
+    <div class="mt-4 pt-3 border-t border-gray-50 flex justify-between items-center">
+        <a href="grants/graduate-student-scholarship.html" class="text-sm text-teal-700 hover:text-teal-900 font-medium bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded transition">View Details</a>
+        <a href="https://www.ashfoundation.org/apply/graduate-student-scholarship/" target="_blank" rel="noopener" class="text-xs text-gray-400 hover:text-gray-600">Official Site &nearr;</a>
     </div>
 </div>
-<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-purple-500" data-niche="SLP" data-title="new century scholars doctoral scholarship">
+<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 border-l-4 border-l-purple-500" data-niche="SLP" data-title="new century scholars doctoral scholarship">
     <div class="flex items-center justify-between mb-2">
         <span class="text-xs font-bold uppercase tracking-wider text-purple-600">🗣️ SLP</span>
         
     </div>
-    <a href="grants/new-century-scholars-doctoral-scholarship.html" class="block">
-        <h3 class="text-lg font-bold text-gray-900 hover:text-blue-700 transition">New Century Scholars Doctoral Scholarship</h3>
+    <a href="grants/new-century-scholars-doctoral-scholarship.html" class="block group">
+        <h3 class="text-lg font-bold text-gray-900 group-hover:text-teal-700 transition">New Century Scholars Doctoral Scholarship</h3>
     </a>
     <div class="flex gap-4 mt-2 text-sm text-gray-500">
         <span>ASHFoundation</span>
         <span class="font-semibold text-gray-800">$10,000</span>
     </div>
     <p class="text-sm text-gray-600 mt-2">The American Speech-Language-Hearing Foundation (ASHFoundation) invites doctoral students accepted or enrolled in a rese...</p>
-    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2">Students must meet the following criteria to be eligible for the New Century Scholars Doctoral Scholarship</p>
-    <div class="mt-3 flex gap-2">
-        <a href="grants/new-century-scholars-doctoral-scholarship.html" class="text-sm text-blue-600 hover:text-blue-800 font-medium">Details &rarr;</a>
-        <a href="https://www.ashfoundation.org/apply/new-century-scholars-doctoral-scholarship/" target="_blank" rel="noopener" class="text-sm text-gray-400 hover:text-gray-600">Source &nearr;</a>
+    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2 border border-gray-100">Students must meet the following criteria to be eligible for the New Century Scholars Doctoral Scholarship</p>
+    <div class="mt-4 pt-3 border-t border-gray-50 flex justify-between items-center">
+        <a href="grants/new-century-scholars-doctoral-scholarship.html" class="text-sm text-teal-700 hover:text-teal-900 font-medium bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded transition">View Details</a>
+        <a href="https://www.ashfoundation.org/apply/new-century-scholars-doctoral-scholarship/" target="_blank" rel="noopener" class="text-xs text-gray-400 hover:text-gray-600">Official Site &nearr;</a>
     </div>
 </div>
-<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-purple-500" data-niche="SLP" data-title="new century scholars research grant">
+<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 border-l-4 border-l-purple-500" data-niche="SLP" data-title="new century scholars research grant">
     <div class="flex items-center justify-between mb-2">
         <span class="text-xs font-bold uppercase tracking-wider text-purple-600">🗣️ SLP</span>
-        <span class="inline-block bg-yellow-100 text-yellow-700 text-xs px-2 py-0.5 rounded-full font-medium">December 31, 2027</span>
+        <span class="inline-block bg-amber-100 text-amber-800 text-xs px-2 py-0.5 rounded-full font-medium">December 31, 2027</span>
     </div>
-    <a href="grants/new-century-scholars-research-grant.html" class="block">
-        <h3 class="text-lg font-bold text-gray-900 hover:text-blue-700 transition">New Century Scholars Research Grant</h3>
+    <a href="grants/new-century-scholars-research-grant.html" class="block group">
+        <h3 class="text-lg font-bold text-gray-900 group-hover:text-teal-700 transition">New Century Scholars Research Grant</h3>
     </a>
     <div class="flex gap-4 mt-2 text-sm text-gray-500">
         <span>ASHFoundation</span>
         <span class="font-semibold text-gray-800">$50,000</span>
     </div>
     <p class="text-sm text-gray-600 mt-2">The New Century Scholars Research Grant is designed to advance knowledge, tools, and techniques in communication science...</p>
-    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2">Individuals who are committed to teacher-investigator careers</p>
-    <div class="mt-3 flex gap-2">
-        <a href="grants/new-century-scholars-research-grant.html" class="text-sm text-blue-600 hover:text-blue-800 font-medium">Details &rarr;</a>
-        <a href="https://www.ashfoundation.org/apply/new-century-scholars-research-grant/" target="_blank" rel="noopener" class="text-sm text-gray-400 hover:text-gray-600">Source &nearr;</a>
+    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2 border border-gray-100">Individuals who are committed to teacher-investigator careers</p>
+    <div class="mt-4 pt-3 border-t border-gray-50 flex justify-between items-center">
+        <a href="grants/new-century-scholars-research-grant.html" class="text-sm text-teal-700 hover:text-teal-900 font-medium bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded transition">View Details</a>
+        <a href="https://www.ashfoundation.org/apply/new-century-scholars-research-grant/" target="_blank" rel="noopener" class="text-xs text-gray-400 hover:text-gray-600">Official Site &nearr;</a>
     </div>
 </div>
-<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-purple-500" data-niche="SLP" data-title="new investigators research grant">
+<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 border-l-4 border-l-purple-500" data-niche="SLP" data-title="new investigators research grant">
     <div class="flex items-center justify-between mb-2">
         <span class="text-xs font-bold uppercase tracking-wider text-purple-600">🗣️ SLP</span>
-        <span class="inline-block bg-yellow-100 text-yellow-700 text-xs px-2 py-0.5 rounded-full font-medium">December 31, 2026</span>
+        <span class="inline-block bg-amber-100 text-amber-800 text-xs px-2 py-0.5 rounded-full font-medium">December 31, 2026</span>
     </div>
-    <a href="grants/new-investigators-research-grant.html" class="block">
-        <h3 class="text-lg font-bold text-gray-900 hover:text-blue-700 transition">New Investigators Research Grant</h3>
+    <a href="grants/new-investigators-research-grant.html" class="block group">
+        <h3 class="text-lg font-bold text-gray-900 group-hover:text-teal-700 transition">New Investigators Research Grant</h3>
     </a>
     <div class="flex gap-4 mt-2 text-sm text-gray-500">
         <span>ASHFoundation</span>
         <span class="font-semibold text-gray-800">$10,000</span>
     </div>
     <p class="text-sm text-gray-600 mt-2">The New Investigators Research Grant is designed to help further new investigators' research activities by funding preli...</p>
-    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2">Investigators must meet the following criteria to be eligible for the New Investigators Research Grant</p>
-    <div class="mt-3 flex gap-2">
-        <a href="grants/new-investigators-research-grant.html" class="text-sm text-blue-600 hover:text-blue-800 font-medium">Details &rarr;</a>
-        <a href="https://www.ashfoundation.org/apply/new-investigators-research-grant/" target="_blank" rel="noopener" class="text-sm text-gray-400 hover:text-gray-600">Source &nearr;</a>
+    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2 border border-gray-100">Investigators must meet the following criteria to be eligible for the New Investigators Research Grant</p>
+    <div class="mt-4 pt-3 border-t border-gray-50 flex justify-between items-center">
+        <a href="grants/new-investigators-research-grant.html" class="text-sm text-teal-700 hover:text-teal-900 font-medium bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded transition">View Details</a>
+        <a href="https://www.ashfoundation.org/apply/new-investigators-research-grant/" target="_blank" rel="noopener" class="text-xs text-gray-400 hover:text-gray-600">Official Site &nearr;</a>
     </div>
 </div>
-<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-purple-500" data-niche="SLP" data-title="researcher–practitioner collaboration grant">
+<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 border-l-4 border-l-purple-500" data-niche="SLP" data-title="researcher–practitioner collaboration grant">
     <div class="flex items-center justify-between mb-2">
         <span class="text-xs font-bold uppercase tracking-wider text-purple-600">🗣️ SLP</span>
-        <span class="inline-block bg-yellow-100 text-yellow-700 text-xs px-2 py-0.5 rounded-full font-medium">December 31, 2027</span>
+        <span class="inline-block bg-amber-100 text-amber-800 text-xs px-2 py-0.5 rounded-full font-medium">December 31, 2027</span>
     </div>
-    <a href="grants/researcher-practitioner-collaboration-grant.html" class="block">
-        <h3 class="text-lg font-bold text-gray-900 hover:text-blue-700 transition">Researcher–Practitioner Collaboration Grant</h3>
+    <a href="grants/researcher-practitioner-collaboration-grant.html" class="block group">
+        <h3 class="text-lg font-bold text-gray-900 group-hover:text-teal-700 transition">Researcher–Practitioner Collaboration Grant</h3>
     </a>
     <div class="flex gap-4 mt-2 text-sm text-gray-500">
         <span>ASHFoundation</span>
         <span class="font-semibold text-gray-800">$35,000</span>
     </div>
     <p class="text-sm text-gray-600 mt-2">The Researcher-Practitioner Collaboration Grant supports partnerships between academic or organizational researchers and...</p>
-    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2">Investigators/collaborators include the following:</p>
-    <div class="mt-3 flex gap-2">
-        <a href="grants/researcher-practitioner-collaboration-grant.html" class="text-sm text-blue-600 hover:text-blue-800 font-medium">Details &rarr;</a>
-        <a href="https://www.ashfoundation.org/apply/researcher-practitioner-collaboration-grant/" target="_blank" rel="noopener" class="text-sm text-gray-400 hover:text-gray-600">Source &nearr;</a>
+    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2 border border-gray-100">Investigators/collaborators include the following:</p>
+    <div class="mt-4 pt-3 border-t border-gray-50 flex justify-between items-center">
+        <a href="grants/researcher-practitioner-collaboration-grant.html" class="text-sm text-teal-700 hover:text-teal-900 font-medium bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded transition">View Details</a>
+        <a href="https://www.ashfoundation.org/apply/researcher-practitioner-collaboration-grant/" target="_blank" rel="noopener" class="text-xs text-gray-400 hover:text-gray-600">Official Site &nearr;</a>
     </div>
 </div>
-<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-purple-500" data-niche="SLP" data-title="rolland j. van hattum award for contribution in the schools">
+<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 border-l-4 border-l-purple-500" data-niche="SLP" data-title="rolland j. van hattum award for contribution in the schools">
     <div class="flex items-center justify-between mb-2">
         <span class="text-xs font-bold uppercase tracking-wider text-purple-600">🗣️ SLP</span>
         
     </div>
-    <a href="grants/rolland-j-van-hattum-award-for-contribution-in-the-schools.html" class="block">
-        <h3 class="text-lg font-bold text-gray-900 hover:text-blue-700 transition">Rolland J. Van Hattum Award for Contribution in the Schools</h3>
+    <a href="grants/rolland-j-van-hattum-award-for-contribution-in-the-schools.html" class="block group">
+        <h3 class="text-lg font-bold text-gray-900 group-hover:text-teal-700 transition">Rolland J. Van Hattum Award for Contribution in the Schools</h3>
     </a>
     <div class="flex gap-4 mt-2 text-sm text-gray-500">
         <span>ASHFoundation</span>
         <span class="font-semibold text-gray-800">$2,000</span>
     </div>
     <p class="text-sm text-gray-600 mt-2">The Rolland J. Van Hattum Award for Contribution in the Schools recognizes an individual’s exemplary commitment and cont...</p>
-    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2">activities or achievements include, but are not limited to:</p>
-    <div class="mt-3 flex gap-2">
-        <a href="grants/rolland-j-van-hattum-award-for-contribution-in-the-schools.html" class="text-sm text-blue-600 hover:text-blue-800 font-medium">Details &rarr;</a>
-        <a href="https://www.ashfoundation.org/apply/rolland-van-hattum-award-for-contribution-in-the-schools/" target="_blank" rel="noopener" class="text-sm text-gray-400 hover:text-gray-600">Source &nearr;</a>
+    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2 border border-gray-100">activities or achievements include, but are not limited to:</p>
+    <div class="mt-4 pt-3 border-t border-gray-50 flex justify-between items-center">
+        <a href="grants/rolland-j-van-hattum-award-for-contribution-in-the-schools.html" class="text-sm text-teal-700 hover:text-teal-900 font-medium bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded transition">View Details</a>
+        <a href="https://www.ashfoundation.org/apply/rolland-van-hattum-award-for-contribution-in-the-schools/" target="_blank" rel="noopener" class="text-xs text-gray-400 hover:text-gray-600">Official Site &nearr;</a>
     </div>
 </div>
-<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-purple-500" data-niche="SLP" data-title="speech science research grant">
+<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 border-l-4 border-l-purple-500" data-niche="SLP" data-title="speech science research grant">
     <div class="flex items-center justify-between mb-2">
         <span class="text-xs font-bold uppercase tracking-wider text-purple-600">🗣️ SLP</span>
-        <span class="inline-block bg-yellow-100 text-yellow-700 text-xs px-2 py-0.5 rounded-full font-medium">December 31, 2027</span>
+        <span class="inline-block bg-amber-100 text-amber-800 text-xs px-2 py-0.5 rounded-full font-medium">December 31, 2027</span>
     </div>
-    <a href="grants/speech-science-research-grant.html" class="block">
-        <h3 class="text-lg font-bold text-gray-900 hover:text-blue-700 transition">Speech Science Research Grant</h3>
+    <a href="grants/speech-science-research-grant.html" class="block group">
+        <h3 class="text-lg font-bold text-gray-900 group-hover:text-teal-700 transition">Speech Science Research Grant</h3>
     </a>
     <div class="flex gap-4 mt-2 text-sm text-gray-500">
         <span>ASHFoundation</span>
         <span class="font-semibold text-gray-800">$10,000</span>
     </div>
     <p class="text-sm text-gray-600 mt-2">The American Speech-Language-Hearing Foundation (ASHFoundation) invites new investigators to submit proposals in competi...</p>
-    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2">Investigators must meet the following criteria to be eligible for the Speech Science Research Grant</p>
-    <div class="mt-3 flex gap-2">
-        <a href="grants/speech-science-research-grant.html" class="text-sm text-blue-600 hover:text-blue-800 font-medium">Details &rarr;</a>
-        <a href="https://www.ashfoundation.org/apply/speech-science-research-grant/" target="_blank" rel="noopener" class="text-sm text-gray-400 hover:text-gray-600">Source &nearr;</a>
+    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2 border border-gray-100">Investigators must meet the following criteria to be eligible for the Speech Science Research Grant</p>
+    <div class="mt-4 pt-3 border-t border-gray-50 flex justify-between items-center">
+        <a href="grants/speech-science-research-grant.html" class="text-sm text-teal-700 hover:text-teal-900 font-medium bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded transition">View Details</a>
+        <a href="https://www.ashfoundation.org/apply/speech-science-research-grant/" target="_blank" rel="noopener" class="text-xs text-gray-400 hover:text-gray-600">Official Site &nearr;</a>
     </div>
 </div>
-<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-purple-500" data-niche="SLP" data-title="state clinical achievement awards and louis m. dicarlo award for recent clinical achievement">
+<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 border-l-4 border-l-purple-500" data-niche="SLP" data-title="state clinical achievement awards and louis m. dicarlo award for recent clinical achievement">
     <div class="flex items-center justify-between mb-2">
         <span class="text-xs font-bold uppercase tracking-wider text-purple-600">🗣️ SLP</span>
         
     </div>
-    <a href="grants/state-clinical-achievement-awards-and-louis-m-dicarlo-award-for-recent-clinical-.html" class="block">
-        <h3 class="text-lg font-bold text-gray-900 hover:text-blue-700 transition">State Clinical Achievement Awards and Louis M. DiCarlo Award for Recent Clinical Achievement</h3>
+    <a href="grants/state-clinical-achievement-awards-and-louis-m-dicarlo-award-for-recent-clinical-.html" class="block group">
+        <h3 class="text-lg font-bold text-gray-900 group-hover:text-teal-700 transition">State Clinical Achievement Awards and Louis M. DiCarlo Award for Recent Clinical Achievement</h3>
     </a>
     <div class="flex gap-4 mt-2 text-sm text-gray-500">
         <span>ASHFoundation</span>
         <span class="font-semibold text-gray-800">$2,500</span>
     </div>
     <p class="text-sm text-gray-600 mt-2">The Louis M. DiCarlo Award for Recent Clinical Achievement recipient is selected each year from a group of State Clinica...</p>
-    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2">activities or accomplishments include, but are not restricted to, the following examples:</p>
-    <div class="mt-3 flex gap-2">
-        <a href="grants/state-clinical-achievement-awards-and-louis-m-dicarlo-award-for-recent-clinical-.html" class="text-sm text-blue-600 hover:text-blue-800 font-medium">Details &rarr;</a>
-        <a href="https://www.ashfoundation.org/apply/louis-dicarlo-award-for-recent-clinical-achievement/" target="_blank" rel="noopener" class="text-sm text-gray-400 hover:text-gray-600">Source &nearr;</a>
+    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2 border border-gray-100">activities or accomplishments include, but are not restricted to, the following examples:</p>
+    <div class="mt-4 pt-3 border-t border-gray-50 flex justify-between items-center">
+        <a href="grants/state-clinical-achievement-awards-and-louis-m-dicarlo-award-for-recent-clinical-.html" class="text-sm text-teal-700 hover:text-teal-900 font-medium bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded transition">View Details</a>
+        <a href="https://www.ashfoundation.org/apply/louis-dicarlo-award-for-recent-clinical-achievement/" target="_blank" rel="noopener" class="text-xs text-gray-400 hover:text-gray-600">Official Site &nearr;</a>
     </div>
 </div>
-<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-purple-500" data-niche="SLP" data-title="student research grant in audiology">
+<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 border-l-4 border-l-purple-500" data-niche="SLP" data-title="student research grant in audiology">
     <div class="flex items-center justify-between mb-2">
         <span class="text-xs font-bold uppercase tracking-wider text-purple-600">🗣️ SLP</span>
-        <span class="inline-block bg-yellow-100 text-yellow-700 text-xs px-2 py-0.5 rounded-full font-medium">December 31, 2027</span>
+        <span class="inline-block bg-amber-100 text-amber-800 text-xs px-2 py-0.5 rounded-full font-medium">December 31, 2027</span>
     </div>
-    <a href="grants/student-research-grant-in-audiology.html" class="block">
-        <h3 class="text-lg font-bold text-gray-900 hover:text-blue-700 transition">Student Research Grant in Audiology</h3>
+    <a href="grants/student-research-grant-in-audiology.html" class="block group">
+        <h3 class="text-lg font-bold text-gray-900 group-hover:text-teal-700 transition">Student Research Grant in Audiology</h3>
     </a>
     <div class="flex gap-4 mt-2 text-sm text-gray-500">
         <span>ASHFoundation</span>
         <span class="font-semibold text-gray-800">$4,000</span>
     </div>
     <p class="text-sm text-gray-600 mt-2">The American Speech-Language-Hearing Foundation (ASHFoundation) invites doctoral students to compete for the Student Res...</p>
-    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2">Students must meet the following requirements to be eligible for the Student Research Grant in Audiology</p>
-    <div class="mt-3 flex gap-2">
-        <a href="grants/student-research-grant-in-audiology.html" class="text-sm text-blue-600 hover:text-blue-800 font-medium">Details &rarr;</a>
-        <a href="https://www.ashfoundation.org/apply/student-research-grant-in-audiology/" target="_blank" rel="noopener" class="text-sm text-gray-400 hover:text-gray-600">Source &nearr;</a>
+    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2 border border-gray-100">Students must meet the following requirements to be eligible for the Student Research Grant in Audiology</p>
+    <div class="mt-4 pt-3 border-t border-gray-50 flex justify-between items-center">
+        <a href="grants/student-research-grant-in-audiology.html" class="text-sm text-teal-700 hover:text-teal-900 font-medium bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded transition">View Details</a>
+        <a href="https://www.ashfoundation.org/apply/student-research-grant-in-audiology/" target="_blank" rel="noopener" class="text-xs text-gray-400 hover:text-gray-600">Official Site &nearr;</a>
     </div>
 </div>
-<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-purple-500" data-niche="SLP" data-title="student research grant in early childhood language development">
+<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 border-l-4 border-l-purple-500" data-niche="SLP" data-title="student research grant in early childhood language development">
     <div class="flex items-center justify-between mb-2">
         <span class="text-xs font-bold uppercase tracking-wider text-purple-600">🗣️ SLP</span>
-        <span class="inline-block bg-yellow-100 text-yellow-700 text-xs px-2 py-0.5 rounded-full font-medium">December 31, 2027</span>
+        <span class="inline-block bg-amber-100 text-amber-800 text-xs px-2 py-0.5 rounded-full font-medium">December 31, 2027</span>
     </div>
-    <a href="grants/student-research-grant-in-early-childhood-language-development.html" class="block">
-        <h3 class="text-lg font-bold text-gray-900 hover:text-blue-700 transition">Student Research Grant in Early Childhood Language Development</h3>
+    <a href="grants/student-research-grant-in-early-childhood-language-development.html" class="block group">
+        <h3 class="text-lg font-bold text-gray-900 group-hover:text-teal-700 transition">Student Research Grant in Early Childhood Language Development</h3>
     </a>
     <div class="flex gap-4 mt-2 text-sm text-gray-500">
         <span>ASHFoundation</span>
         <span class="font-semibold text-gray-800">$4,000</span>
     </div>
     <p class="text-sm text-gray-600 mt-2">The American Speech-Language-Hearing Foundation (ASHFoundation) invites master's and doctoral students to compete for th...</p>
-    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2">Students must meet the following requirements to be eligible for the Student Research Grant in Early Childhood Language Development</p>
-    <div class="mt-3 flex gap-2">
-        <a href="grants/student-research-grant-in-early-childhood-language-development.html" class="text-sm text-blue-600 hover:text-blue-800 font-medium">Details &rarr;</a>
-        <a href="https://www.ashfoundation.org/apply/student-research-grant-in-early-childhood-language-development/" target="_blank" rel="noopener" class="text-sm text-gray-400 hover:text-gray-600">Source &nearr;</a>
+    <p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2 border border-gray-100">Students must meet the following requirements to be eligible for the Student Research Grant in Early Childhood Language Development</p>
+    <div class="mt-4 pt-3 border-t border-gray-50 flex justify-between items-center">
+        <a href="grants/student-research-grant-in-early-childhood-language-development.html" class="text-sm text-teal-700 hover:text-teal-900 font-medium bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded transition">View Details</a>
+        <a href="https://www.ashfoundation.org/apply/student-research-grant-in-early-childhood-language-development/" target="_blank" rel="noopener" class="text-xs text-gray-400 hover:text-gray-600">Official Site &nearr;</a>
     </div>
 </div>
-<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-orange-500" data-niche="OT" data-title="award for excellence in interchapter collaboration">
+<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 border-l-4 border-l-orange-500" data-niche="OT" data-title="award for excellence in interchapter collaboration">
     <div class="flex items-center justify-between mb-2">
         <span class="text-xs font-bold uppercase tracking-wider text-orange-600">🖐️ OT</span>
-        <span class="inline-block bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full font-medium">Rolling</span>
+        <span class="inline-block bg-emerald-100 text-emerald-700 text-xs px-2 py-0.5 rounded-full font-medium">Rolling</span>
     </div>
-    <a href="grants/award-for-excellence-in-interchapter-collaboration.html" class="block">
-        <h3 class="text-lg font-bold text-gray-900 hover:text-blue-700 transition">Award for Excellence in Interchapter Collaboration</h3>
+    <a href="grants/award-for-excellence-in-interchapter-collaboration.html" class="block group">
+        <h3 class="text-lg font-bold text-gray-900 group-hover:text-teal-700 transition">Award for Excellence in Interchapter Collaboration</h3>
     </a>
     <div class="flex gap-4 mt-2 text-sm text-gray-500">
         <span>AOTF</span>
@@ -832,18 +849,18 @@
     </div>
     <p class="text-sm text-gray-600 mt-2">The PTE Award for Excellence in Interchapter Collaboration has been established tohonor and recognize Pi Theta Epsilon c...</p>
     
-    <div class="mt-3 flex gap-2">
-        <a href="grants/award-for-excellence-in-interchapter-collaboration.html" class="text-sm text-blue-600 hover:text-blue-800 font-medium">Details &rarr;</a>
-        <a href="https://www.aotf.org/Pi-Theta-Epsilon/PTE-Awards/Award-for-Excellence-in-Interchapter-Collaboration" target="_blank" rel="noopener" class="text-sm text-gray-400 hover:text-gray-600">Source &nearr;</a>
+    <div class="mt-4 pt-3 border-t border-gray-50 flex justify-between items-center">
+        <a href="grants/award-for-excellence-in-interchapter-collaboration.html" class="text-sm text-teal-700 hover:text-teal-900 font-medium bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded transition">View Details</a>
+        <a href="https://www.aotf.org/Pi-Theta-Epsilon/PTE-Awards/Award-for-Excellence-in-Interchapter-Collaboration" target="_blank" rel="noopener" class="text-xs text-gray-400 hover:text-gray-600">Official Site &nearr;</a>
     </div>
 </div>
-<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-orange-500" data-niche="OT" data-title="planning grant collectives">
+<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 border-l-4 border-l-orange-500" data-niche="OT" data-title="planning grant collectives">
     <div class="flex items-center justify-between mb-2">
         <span class="text-xs font-bold uppercase tracking-wider text-orange-600">🖐️ OT</span>
-        <span class="inline-block bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full font-medium">Rolling</span>
+        <span class="inline-block bg-emerald-100 text-emerald-700 text-xs px-2 py-0.5 rounded-full font-medium">Rolling</span>
     </div>
-    <a href="grants/planning-grant-collectives.html" class="block">
-        <h3 class="text-lg font-bold text-gray-900 hover:text-blue-700 transition">Planning Grant Collectives</h3>
+    <a href="grants/planning-grant-collectives.html" class="block group">
+        <h3 class="text-lg font-bold text-gray-900 group-hover:text-teal-700 transition">Planning Grant Collectives</h3>
     </a>
     <div class="flex gap-4 mt-2 text-sm text-gray-500">
         <span>AOTF</span>
@@ -851,18 +868,18 @@
     </div>
     <p class="text-sm text-gray-600 mt-2">In the spring of 2017, AOTF began a series of Planning Grant Collectives; these workshops bring together researchers fro...</p>
     
-    <div class="mt-3 flex gap-2">
-        <a href="grants/planning-grant-collectives.html" class="text-sm text-blue-600 hover:text-blue-800 font-medium">Details &rarr;</a>
-        <a href="https://www.aotf.org/Research-Resources/Planning-Grant-Collectives" target="_blank" rel="noopener" class="text-sm text-gray-400 hover:text-gray-600">Source &nearr;</a>
+    <div class="mt-4 pt-3 border-t border-gray-50 flex justify-between items-center">
+        <a href="grants/planning-grant-collectives.html" class="text-sm text-teal-700 hover:text-teal-900 font-medium bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded transition">View Details</a>
+        <a href="https://www.aotf.org/Research-Resources/Planning-Grant-Collectives" target="_blank" rel="noopener" class="text-xs text-gray-400 hover:text-gray-600">Official Site &nearr;</a>
     </div>
 </div>
-<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-orange-500" data-niche="OT" data-title="president’s award">
+<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 border-l-4 border-l-orange-500" data-niche="OT" data-title="president’s award">
     <div class="flex items-center justify-between mb-2">
         <span class="text-xs font-bold uppercase tracking-wider text-orange-600">🖐️ OT</span>
-        <span class="inline-block bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full font-medium">Rolling</span>
+        <span class="inline-block bg-emerald-100 text-emerald-700 text-xs px-2 py-0.5 rounded-full font-medium">Rolling</span>
     </div>
-    <a href="grants/president-s-award.html" class="block">
-        <h3 class="text-lg font-bold text-gray-900 hover:text-blue-700 transition">President’s Award</h3>
+    <a href="grants/president-s-award.html" class="block group">
+        <h3 class="text-lg font-bold text-gray-900 group-hover:text-teal-700 transition">President’s Award</h3>
     </a>
     <div class="flex gap-4 mt-2 text-sm text-gray-500">
         <span>AOTF</span>
@@ -870,18 +887,18 @@
     </div>
     <p class="text-sm text-gray-600 mt-2">The President’s Award has been established tohonor and recognize Pi Theta Epsilon chapters who organize and implement ou...</p>
     
-    <div class="mt-3 flex gap-2">
-        <a href="grants/president-s-award.html" class="text-sm text-blue-600 hover:text-blue-800 font-medium">Details &rarr;</a>
-        <a href="https://www.aotf.org/Pi-Theta-Epsilon/PTE-Awards/Presidents-Award" target="_blank" rel="noopener" class="text-sm text-gray-400 hover:text-gray-600">Source &nearr;</a>
+    <div class="mt-4 pt-3 border-t border-gray-50 flex justify-between items-center">
+        <a href="grants/president-s-award.html" class="text-sm text-teal-700 hover:text-teal-900 font-medium bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded transition">View Details</a>
+        <a href="https://www.aotf.org/Pi-Theta-Epsilon/PTE-Awards/Presidents-Award" target="_blank" rel="noopener" class="text-xs text-gray-400 hover:text-gray-600">Official Site &nearr;</a>
     </div>
 </div>
-<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-purple-500" data-niche="SLP" data-title="frank r. kleffner lifetime clinical career award">
+<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 border-l-4 border-l-purple-500" data-niche="SLP" data-title="frank r. kleffner lifetime clinical career award">
     <div class="flex items-center justify-between mb-2">
         <span class="text-xs font-bold uppercase tracking-wider text-purple-600">🗣️ SLP</span>
         
     </div>
-    <a href="grants/frank-r-kleffner-lifetime-clinical-career-award.html" class="block">
-        <h3 class="text-lg font-bold text-gray-900 hover:text-blue-700 transition">Frank R. Kleffner Lifetime Clinical Career Award</h3>
+    <a href="grants/frank-r-kleffner-lifetime-clinical-career-award.html" class="block group">
+        <h3 class="text-lg font-bold text-gray-900 group-hover:text-teal-700 transition">Frank R. Kleffner Lifetime Clinical Career Award</h3>
     </a>
     <div class="flex gap-4 mt-2 text-sm text-gray-500">
         <span>ASHFoundation</span>
@@ -889,28 +906,41 @@
     </div>
     <p class="text-sm text-gray-600 mt-2">The Frank R. Kleffner Lifetime Clinical Career Award recognizes an individual’s outstanding contributions to communicati...</p>
     
-    <div class="mt-3 flex gap-2">
-        <a href="grants/frank-r-kleffner-lifetime-clinical-career-award.html" class="text-sm text-blue-600 hover:text-blue-800 font-medium">Details &rarr;</a>
-        <a href="https://www.ashfoundation.org/apply/frank-kleffner-lifetime-clinical-career-award/" target="_blank" rel="noopener" class="text-sm text-gray-400 hover:text-gray-600">Source &nearr;</a>
+    <div class="mt-4 pt-3 border-t border-gray-50 flex justify-between items-center">
+        <a href="grants/frank-r-kleffner-lifetime-clinical-career-award.html" class="text-sm text-teal-700 hover:text-teal-900 font-medium bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded transition">View Details</a>
+        <a href="https://www.ashfoundation.org/apply/frank-kleffner-lifetime-clinical-career-award/" target="_blank" rel="noopener" class="text-xs text-gray-400 hover:text-gray-600">Official Site &nearr;</a>
     </div>
 </div>
         </div>
 
-        <p id="no-results" class="hidden text-center text-gray-400 py-12 text-lg">No grants match your search.</p>
+        <div id="no-results" class="hidden text-center py-24">
+            <p class="text-xl text-gray-400 font-medium">No grants match your search.</p>
+            <button onclick="document.getElementById('search').value=''; filterAll();" class="mt-4 text-teal-600 hover:text-teal-800 font-medium">Clear Search</button>
+        </div>
 
-        <!-- Free Resources CTA -->
-        <div class="mt-12 bg-emerald-50 border border-emerald-200 rounded-xl p-8 text-center">
-            <h2 class="text-2xl font-bold text-emerald-800 mb-3">&#x1f49a; Need Free or Low-Cost Therapy?</h2>
-            <p class="text-emerald-700 mb-4">Many families qualify for free therapy services through government programs, Regional Centers, and Early Intervention. We've compiled the best resources.</p>
-            <a href="resources.html" class="inline-block bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-emerald-700 transition">Browse Free Resources &rarr;</a>
+        <!-- About Section -->
+        <div id="about" class="mt-24 bg-white rounded-2xl p-8 md:p-12 border border-gray-100 text-center max-w-3xl mx-auto shadow-sm">
+            <h2 class="text-2xl font-bold text-slate-800 mb-4">About GrantFlow</h2>
+            <p class="text-slate-600 mb-6 leading-relaxed">
+                Finding funding shouldn't be a full-time job. GrantFlow is an open directory designed to help allied health professionals and families discover financial support without sifting through endless Google results.
+            </p>
+            <p class="text-slate-600 mb-8 leading-relaxed">
+                We aggregate data from public foundations and verified sources daily. We are not a grant-maker; we simply connect you to the application sources.
+            </p>
+            <div class="flex justify-center gap-4">
+                <a href="mailto:hello@grantflow.vercel.app" class="text-teal-700 hover:text-teal-900 font-medium">Contact Us</a>
+                <span class="text-gray-300">|</span>
+                <a href="resources.html" class="text-teal-700 hover:text-teal-900 font-medium">View Free Resources</a>
+            </div>
         </div>
 
     </main>
 
-    <footer class="bg-gray-800 text-gray-400 py-6 mt-12">
-        <div class="max-w-6xl mx-auto px-4 text-center text-sm">
-            <p>&copy; 2026 GrantFlow. Automated grant discovery for allied health professionals and families.</p>
-            <p class="mt-1">Data sourced from public foundations. Always verify details on official sites.</p>
+    <footer class="bg-white border-t border-gray-200 py-12 mt-12">
+        <div class="max-w-6xl mx-auto px-4 text-center text-sm text-gray-500">
+            <p class="font-semibold text-slate-700 mb-2">&copy; 2026 GrantFlow</p>
+            <p>Data sourced from public foundations. We do not guarantee funding availability.</p>
+            <p class="mt-4 text-xs text-gray-400">Built to help.</p>
         </div>
     </footer>
 
@@ -919,6 +949,16 @@
 
         function filterNiche(niche) {
             activeNiche = niche;
+            
+            // Update active button state
+            document.querySelectorAll('button').forEach(btn => {
+                if (btn.textContent.includes(niche) || (niche === 'ALL' && btn.textContent.includes('All'))) {
+                    btn.classList.add('ring-2', 'ring-teal-500', 'ring-offset-1');
+                } else {
+                    btn.classList.remove('ring-2', 'ring-teal-500', 'ring-offset-1');
+                }
+            });
+
             filterAll();
         }
 
@@ -941,6 +981,9 @@
 
             document.getElementById('no-results').classList.toggle('hidden', visible > 0);
         }
+
+        // Init
+        filterNiche('ALL');
     </script>
 
 </body>

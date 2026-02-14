@@ -11,67 +11,71 @@
     <meta property="og:url" content="https://grantflow.vercel.app/grants/apply-for-a-grant.html">
     <link rel="canonical" href="https://grantflow.vercel.app/grants/apply-for-a-grant.html">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'); body { font-family: 'Inter', sans-serif; }</style>
 </head>
-<body class="bg-gray-50 text-gray-800 min-h-screen">
+<body class="bg-slate-50 text-slate-800 min-h-screen">
 
-    <nav class="bg-white border-b">
-        <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
-            <a href="../index.html" class="text-xl font-bold text-blue-700">🚀 GrantFlow</a>
-            <a href="../index.html" class="text-sm text-gray-500 hover:text-blue-600">&larr; All Grants</a>
+    <nav class="bg-white border-b border-gray-200">
+        <div class="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="../index.html" class="text-xl font-bold text-slate-800 flex items-center gap-2">💙 GrantFlow</a>
+            <a href="../index.html" class="text-sm text-slate-500 hover:text-teal-600 font-medium">&larr; Back to Directory</a>
         </div>
     </nav>
 
     <main class="max-w-4xl mx-auto px-4 py-8">
-        <div class="bg-white rounded-xl shadow-sm p-8 border-l-4 border-pink-500">
-            <span class="inline-block bg-pink-100 text-pink-700 text-xs font-bold uppercase px-3 py-1 rounded-full mb-4">👨‍👩‍👧‍👦 Family & Children</span>
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-8 border-l-4 border-l-sky-500">
+            <span class="inline-block bg-sky-50 text-sky-700 text-xs font-bold uppercase px-3 py-1 rounded-full mb-4 border border-sky-100">💙 Family & Children</span>
 
-            <h1 class="text-3xl font-bold text-gray-900 mb-4">Apply for a Grant</h1>
+            <h1 class="text-3xl font-bold text-slate-900 mb-6 leading-tight">Apply for a Grant</h1>
 
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-                <div class="bg-gray-50 rounded-lg p-3 text-center">
-                    <p class="text-xs text-gray-500 uppercase">Amount</p>
-                    <p class="text-lg font-bold text-green-700">$170,000</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                <div class="bg-slate-50 rounded-lg p-4 border border-slate-100">
+                    <p class="text-xs text-slate-500 uppercase font-semibold mb-1">Amount</p>
+                    <p class="text-lg font-bold text-teal-700">$170,000</p>
                 </div>
-                <div class="bg-gray-50 rounded-lg p-3 text-center">
-                    <p class="text-xs text-gray-500 uppercase">Deadline</p>
-                    <p class="text-lg font-bold text-yellow-700">Rolling</p>
+                <div class="bg-slate-50 rounded-lg p-4 border border-slate-100">
+                    <p class="text-xs text-slate-500 uppercase font-semibold mb-1">Deadline</p>
+                    <p class="text-lg font-bold text-amber-700">Rolling</p>
                 </div>
-                <div class="bg-gray-50 rounded-lg p-3 text-center">
-                    <p class="text-xs text-gray-500 uppercase">Source</p>
-                    <p class="text-sm font-semibold text-gray-700">UHCCF</p>
+                <div class="bg-slate-50 rounded-lg p-4 border border-slate-100">
+                    <p class="text-xs text-slate-500 uppercase font-semibold mb-1">Source</p>
+                    <p class="text-sm font-semibold text-slate-700 truncate">UHCCF</p>
                 </div>
-                <div class="bg-gray-50 rounded-lg p-3 text-center">
-                    <p class="text-xs text-gray-500 uppercase">Niche</p>
-                    <p class="text-sm font-semibold text-gray-700">Family & Children</p>
+                <div class="bg-slate-50 rounded-lg p-4 border border-slate-100">
+                    <p class="text-xs text-slate-500 uppercase font-semibold mb-1">Category</p>
+                    <p class="text-sm font-semibold text-slate-700">Family & Children</p>
                 </div>
             </div>
 
-            <div class="mb-6">
-                <h2 class="text-lg font-semibold mb-2">About This Opportunity</h2>
-                <p class="text-gray-600 leading-relaxed">Did you know you don’t have to be a UnitedHealthcare member to apply for a life-changing UHCCF medical grant? Learn who qualifies and how to apply here.</p>
+            <div class="prose max-w-none text-slate-600 mb-8">
+                <h2 class="text-lg font-bold text-slate-800 mb-3">About This Opportunity</h2>
+                <p class="leading-relaxed mb-6">Did you know you don’t have to be a UnitedHealthcare member to apply for a life-changing UHCCF medical grant? Learn who qualifies and how to apply here.</p>
+                
+                <h2 class="text-lg font-bold text-slate-800 mb-3">Eligibility Requirements</h2>
+                <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-r mb-6">
+                    <p class="text-blue-900 text-sm">and required documentation</p>
+                </div>
             </div>
 
-            <div class="mb-6">
-                <h2 class="text-lg font-semibold mb-2">Eligibility</h2>
-                <p class="text-gray-600">and required documentation</p>
-            </div>
-
-            <div class="flex gap-3">
-                <a href="https://www.uhccf.org/apply-for-a-grant/" target="_blank" rel="noopener" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
-                    Apply Now &rarr;
+            <div class="flex flex-col sm:flex-row gap-4 border-t border-gray-100 pt-6">
+                <a href="https://www.uhccf.org/apply-for-a-grant/" target="_blank" rel="noopener" class="inline-flex justify-center items-center bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-teal-700 transition shadow-sm hover:shadow">
+                    Apply on Official Site &rarr;
                 </a>
-                <a href="../index.html" class="inline-block bg-gray-100 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition">
-                    Browse All Grants
+                <a href="../index.html" class="inline-flex justify-center items-center bg-white text-slate-600 border border-gray-200 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition">
+                    Browse More Grants
                 </a>
             </div>
         </div>
 
-        <p class="text-xs text-gray-400 mt-6 text-center">Last verified: 2026-02-13 | Data sourced from public foundations | Always verify details on the official site.</p>
+        <p class="text-xs text-gray-400 mt-8 text-center">
+            Information gathered from public sources. Last verified: 2026-02-13.<br>
+            ALWAYS verify details, deadlines, and requirements on the official application page.
+        </p>
     </main>
 
-    <footer class="bg-gray-800 text-gray-400 py-6 mt-12">
-        <div class="max-w-4xl mx-auto px-4 text-center text-sm">
-            <p>&copy; 2026 GrantFlow. Automated grant discovery for allied health professionals.</p>
+    <footer class="bg-white border-t border-gray-200 py-8 mt-12">
+        <div class="max-w-4xl mx-auto px-4 text-center text-sm text-gray-500">
+            <p>&copy; 2026 GrantFlow. A free community resource for allied health professionals.</p>
         </div>
     </footer>
 

@@ -1,5 +1,5 @@
 """
-GrantFlow Site Builder v3
+GrantFlow Site Builder v4 (Trust Update)
 Generates:
   - index.html (main listing with filters + search)
   - grants/<slug>.html (individual SEO pages per grant)
@@ -24,7 +24,7 @@ NICHE_META = {
     "SLP": {"label": "Speech-Language Pathology", "emoji": "🗣️", "color": "purple", "icon": "SLP"},
     "PT":  {"label": "Physical Therapy", "emoji": "🏃", "color": "green", "icon": "PT"},
     "OT":  {"label": "Occupational Therapy", "emoji": "🖐️", "color": "orange", "icon": "OT"},
-    "Family": {"label": "Family & Children", "emoji": "👨‍👩‍👧‍👦", "color": "pink", "icon": "FAM"},
+    "Family": {"label": "Family & Children", "emoji": "💙", "color": "sky", "icon": "FAM"},
     "STEM": {"label": "STEM", "emoji": "🔬", "color": "blue", "icon": "STEM"},
 }
 
@@ -85,13 +85,13 @@ def build_card_html(grant, slug):
     deadline_badge = ""
     if deadline and deadline != "See website":
         if deadline == "Rolling":
-            deadline_badge = '<span class="inline-block bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full font-medium">Rolling</span>'
+            deadline_badge = '<span class="inline-block bg-emerald-100 text-emerald-700 text-xs px-2 py-0.5 rounded-full font-medium">Rolling</span>'
         else:
-            deadline_badge = f'<span class="inline-block bg-yellow-100 text-yellow-700 text-xs px-2 py-0.5 rounded-full font-medium">{deadline}</span>'
+            deadline_badge = f'<span class="inline-block bg-amber-100 text-amber-800 text-xs px-2 py-0.5 rounded-full font-medium">{deadline}</span>'
 
     eligibility_html = ""
     if eligibility:
-        eligibility_html = f'<p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2">{eligibility}</p>'
+        eligibility_html = f'<p class="text-xs text-gray-500 bg-gray-50 p-2 rounded mt-2 border border-gray-100">{eligibility}</p>'
 
     summary_html = ""
     if summary:
@@ -99,13 +99,13 @@ def build_card_html(grant, slug):
         summary_html = f'<p class="text-sm text-gray-600 mt-2">{short}</p>'
 
     return f'''
-<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border-l-4 border-{ni["color"]}-500" data-niche="{grant["niche"]}" data-title="{grant["title"].lower()}">
+<div class="grant-card bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 border-l-4 border-l-{ni["color"]}-500" data-niche="{grant["niche"]}" data-title="{grant["title"].lower()}">
     <div class="flex items-center justify-between mb-2">
         <span class="text-xs font-bold uppercase tracking-wider text-{ni["color"]}-600">{ni["emoji"]} {grant["niche"]}</span>
         {deadline_badge}
     </div>
-    <a href="grants/{slug}.html" class="block">
-        <h3 class="text-lg font-bold text-gray-900 hover:text-blue-700 transition">{grant["title"]}</h3>
+    <a href="grants/{slug}.html" class="block group">
+        <h3 class="text-lg font-bold text-gray-900 group-hover:text-teal-700 transition">{grant["title"]}</h3>
     </a>
     <div class="flex gap-4 mt-2 text-sm text-gray-500">
         <span>{grant.get("source", "")}</span>
@@ -113,9 +113,9 @@ def build_card_html(grant, slug):
     </div>
     {summary_html}
     {eligibility_html}
-    <div class="mt-3 flex gap-2">
-        <a href="grants/{slug}.html" class="text-sm text-blue-600 hover:text-blue-800 font-medium">Details &rarr;</a>
-        <a href="{grant.get("link", "#")}" target="_blank" rel="noopener" class="text-sm text-gray-400 hover:text-gray-600">Source &nearr;</a>
+    <div class="mt-4 pt-3 border-t border-gray-50 flex justify-between items-center">
+        <a href="grants/{slug}.html" class="text-sm text-teal-700 hover:text-teal-900 font-medium bg-teal-50 hover:bg-teal-100 px-3 py-1.5 rounded transition">View Details</a>
+        <a href="{grant.get("link", "#")}" target="_blank" rel="noopener" class="text-xs text-gray-400 hover:text-gray-600">Official Site &nearr;</a>
     </div>
 </div>'''
 
@@ -144,67 +144,71 @@ def build_grant_page(grant, slug):
     <meta property="og:url" content="{SITE_URL}/grants/{slug}.html">
     <link rel="canonical" href="{SITE_URL}/grants/{slug}.html">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'); body {{ font-family: 'Inter', sans-serif; }}</style>
 </head>
-<body class="bg-gray-50 text-gray-800 min-h-screen">
+<body class="bg-slate-50 text-slate-800 min-h-screen">
 
-    <nav class="bg-white border-b">
-        <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
-            <a href="../index.html" class="text-xl font-bold text-blue-700">🚀 {BRAND}</a>
-            <a href="../index.html" class="text-sm text-gray-500 hover:text-blue-600">&larr; All Grants</a>
+    <nav class="bg-white border-b border-gray-200">
+        <div class="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="../index.html" class="text-xl font-bold text-slate-800 flex items-center gap-2">💙 {BRAND}</a>
+            <a href="../index.html" class="text-sm text-slate-500 hover:text-teal-600 font-medium">&larr; Back to Directory</a>
         </div>
     </nav>
 
     <main class="max-w-4xl mx-auto px-4 py-8">
-        <div class="bg-white rounded-xl shadow-sm p-8 border-l-4 border-{ni["color"]}-500">
-            <span class="inline-block bg-{ni["color"]}-100 text-{ni["color"]}-700 text-xs font-bold uppercase px-3 py-1 rounded-full mb-4">{ni["emoji"]} {ni["label"]}</span>
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-8 border-l-4 border-l-{ni["color"]}-500">
+            <span class="inline-block bg-{ni["color"]}-50 text-{ni["color"]}-700 text-xs font-bold uppercase px-3 py-1 rounded-full mb-4 border border-{ni["color"]}-100">{ni["emoji"]} {ni["label"]}</span>
 
-            <h1 class="text-3xl font-bold text-gray-900 mb-4">{grant["title"]}</h1>
+            <h1 class="text-3xl font-bold text-slate-900 mb-6 leading-tight">{grant["title"]}</h1>
 
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-                <div class="bg-gray-50 rounded-lg p-3 text-center">
-                    <p class="text-xs text-gray-500 uppercase">Amount</p>
-                    <p class="text-lg font-bold text-green-700">{amount}</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                <div class="bg-slate-50 rounded-lg p-4 border border-slate-100">
+                    <p class="text-xs text-slate-500 uppercase font-semibold mb-1">Amount</p>
+                    <p class="text-lg font-bold text-teal-700">{amount}</p>
                 </div>
-                <div class="bg-gray-50 rounded-lg p-3 text-center">
-                    <p class="text-xs text-gray-500 uppercase">Deadline</p>
-                    <p class="text-lg font-bold text-yellow-700">{deadline}</p>
+                <div class="bg-slate-50 rounded-lg p-4 border border-slate-100">
+                    <p class="text-xs text-slate-500 uppercase font-semibold mb-1">Deadline</p>
+                    <p class="text-lg font-bold text-amber-700">{deadline}</p>
                 </div>
-                <div class="bg-gray-50 rounded-lg p-3 text-center">
-                    <p class="text-xs text-gray-500 uppercase">Source</p>
-                    <p class="text-sm font-semibold text-gray-700">{source}</p>
+                <div class="bg-slate-50 rounded-lg p-4 border border-slate-100">
+                    <p class="text-xs text-slate-500 uppercase font-semibold mb-1">Source</p>
+                    <p class="text-sm font-semibold text-slate-700 truncate">{source}</p>
                 </div>
-                <div class="bg-gray-50 rounded-lg p-3 text-center">
-                    <p class="text-xs text-gray-500 uppercase">Niche</p>
-                    <p class="text-sm font-semibold text-gray-700">{ni["label"]}</p>
+                <div class="bg-slate-50 rounded-lg p-4 border border-slate-100">
+                    <p class="text-xs text-slate-500 uppercase font-semibold mb-1">Category</p>
+                    <p class="text-sm font-semibold text-slate-700">{ni["label"]}</p>
                 </div>
             </div>
 
-            <div class="mb-6">
-                <h2 class="text-lg font-semibold mb-2">About This Opportunity</h2>
-                <p class="text-gray-600 leading-relaxed">{summary}</p>
+            <div class="prose max-w-none text-slate-600 mb-8">
+                <h2 class="text-lg font-bold text-slate-800 mb-3">About This Opportunity</h2>
+                <p class="leading-relaxed mb-6">{summary}</p>
+                
+                <h2 class="text-lg font-bold text-slate-800 mb-3">Eligibility Requirements</h2>
+                <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-r mb-6">
+                    <p class="text-blue-900 text-sm">{eligibility}</p>
+                </div>
             </div>
 
-            <div class="mb-6">
-                <h2 class="text-lg font-semibold mb-2">Eligibility</h2>
-                <p class="text-gray-600">{eligibility}</p>
-            </div>
-
-            <div class="flex gap-3">
-                <a href="{link}" target="_blank" rel="noopener" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
-                    Apply Now &rarr;
+            <div class="flex flex-col sm:flex-row gap-4 border-t border-gray-100 pt-6">
+                <a href="{link}" target="_blank" rel="noopener" class="inline-flex justify-center items-center bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-teal-700 transition shadow-sm hover:shadow">
+                    Apply on Official Site &rarr;
                 </a>
-                <a href="../index.html" class="inline-block bg-gray-100 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition">
-                    Browse All Grants
+                <a href="../index.html" class="inline-flex justify-center items-center bg-white text-slate-600 border border-gray-200 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition">
+                    Browse More Grants
                 </a>
             </div>
         </div>
 
-        <p class="text-xs text-gray-400 mt-6 text-center">Last verified: {grant.get("enriched_at", "Recently")[:10]} | Data sourced from public foundations | Always verify details on the official site.</p>
+        <p class="text-xs text-gray-400 mt-8 text-center">
+            Information gathered from public sources. Last verified: {grant.get("enriched_at", "Recently")[:10]}.<br>
+            ALWAYS verify details, deadlines, and requirements on the official application page.
+        </p>
     </main>
 
-    <footer class="bg-gray-800 text-gray-400 py-6 mt-12">
-        <div class="max-w-4xl mx-auto px-4 text-center text-sm">
-            <p>&copy; 2026 {BRAND}. Automated grant discovery for allied health professionals.</p>
+    <footer class="bg-white border-t border-gray-200 py-8 mt-12">
+        <div class="max-w-4xl mx-auto px-4 text-center text-sm text-gray-500">
+            <p>&copy; 2026 {BRAND}. A free community resource for allied health professionals.</p>
         </div>
     </footer>
 
@@ -217,7 +221,7 @@ def build_index(grants, grant_slugs):
     filter_buttons = ""
     for niche in niches_found:
         ni = get_niche_info(niche)
-        filter_buttons += f'<button onclick="filterNiche(\'{niche}\')" class="px-4 py-2 bg-{ni["color"]}-50 text-{ni["color"]}-700 rounded-lg hover:bg-{ni["color"]}-100 font-medium text-sm transition">{ni["emoji"]} {niche}</button>\n'
+        filter_buttons += f'<button onclick="filterNiche(\'{niche}\')" class="px-4 py-2 bg-white border border-gray-200 text-gray-600 rounded-lg hover:border-{ni["color"]}-300 hover:text-{ni["color"]}-700 hover:bg-{ni["color"]}-50 font-medium text-sm transition shadow-sm">{ni["emoji"]} {niche}</button>\n'
 
     cards_html = ""
     for grant, slug in zip(grants, grant_slugs):
@@ -232,77 +236,107 @@ def build_index(grants, grant_slugs):
     stats_html = ""
     for niche, count in sorted(niche_counts.items()):
         ni = get_niche_info(niche)
-        stats_html += f'<div class="bg-{ni["color"]}-50 rounded-lg p-4 text-center"><p class="text-2xl font-bold text-{ni["color"]}-700">{count}</p><p class="text-xs text-gray-500">{ni["label"]}</p></div>\n'
+        stats_html += f'<div class="bg-white border border-gray-100 rounded-xl p-4 text-center shadow-sm"><p class="text-3xl font-bold text-{ni["color"]}-600">{count}</p><p class="text-xs font-semibold uppercase text-gray-400 mt-1 tracking-wide">{ni["label"]}</p></div>\n'
 
     return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{BRAND} | Allied Health Grants, Scholarships & Family Resources 2026</title>
-    <meta name="description" content="Discover {total}+ grants, scholarships, and fellowships for PT, OT, SLP professionals and families seeking therapy funding. Updated daily.">
-    <meta property="og:title" content="{BRAND} - Allied Health Grant Finder">
+    <title>{BRAND} | Free Grant Directory for PT, OT, SLP & Families</title>
+    <meta name="description" content="A free, curated directory of {total}+ grants and scholarships for physical therapy, occupational therapy, speech pathology, and families. Updated regularly.">
+    <meta property="og:title" content="{BRAND} - Free Allied Health Grant Directory">
     <meta property="og:description" content="Discover {total}+ grants for allied health professionals and families.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{SITE_URL}">
     <link rel="canonical" href="{SITE_URL}">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'); body {{ font-family: 'Inter', sans-serif; }}</style>
 </head>
-<body class="bg-gray-50 text-gray-800 min-h-screen">
+<body class="bg-slate-50 text-slate-800 min-h-screen">
 
-    <nav class="bg-white border-b">
-        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-            <a href="index.html" class="text-xl font-bold text-blue-700">&#x1f680; {BRAND}</a>
-            <div class="flex gap-4 text-sm">
-                <a href="index.html" class="text-blue-600 font-semibold">Grants</a>
-                <a href="resources.html" class="text-gray-500 hover:text-blue-600">Free Resources</a>
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="index.html" class="text-xl font-bold text-slate-800 flex items-center gap-2">💙 {BRAND}</a>
+            <div class="flex gap-6 text-sm font-medium">
+                <a href="index.html" class="text-teal-700">Directory</a>
+                <a href="resources.html" class="text-gray-500 hover:text-teal-600 transition">Free Resources</a>
+                <a href="#about" class="text-gray-500 hover:text-teal-600 transition hidden sm:inline-block">About</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero -->
-    <header class="bg-gradient-to-br from-blue-700 to-indigo-800 text-white">
-        <div class="max-w-6xl mx-auto px-4 py-12">
-            <h1 class="text-4xl md:text-5xl font-bold">&#x1f680; {BRAND}</h1>
-            <p class="mt-3 text-lg text-blue-100 max-w-2xl">Grant discovery for allied health professionals and families. PT, OT, SLP funding — scraped, enriched, and organized daily.</p>
-            <p class="mt-2 text-sm text-blue-200">Last updated: {datetime.now().strftime("%B %d, %Y")} &middot; {total} opportunities tracked</p>
+    <header class="bg-white border-b border-gray-200">
+        <div class="max-w-4xl mx-auto px-4 py-16 text-center">
+            <span class="inline-block py-1 px-3 rounded-full bg-teal-50 text-teal-700 text-xs font-bold uppercase tracking-wide mb-4 border border-teal-100">Free Community Resource</span>
+            <h1 class="text-4xl md:text-6xl font-bold text-slate-900 mb-6 tracking-tight">Find funding for your practice<br><span class="text-teal-600">or your family.</span></h1>
+            <p class="text-lg text-slate-500 max-w-2xl mx-auto mb-8 leading-relaxed">A curated, searchable directory of grants, scholarships, and financial aid for PT, OT, SLP professionals and families with special needs.</p>
+            
+            <div class="flex flex-wrap justify-center gap-8 text-sm text-gray-400 font-medium">
+                <span class="flex items-center gap-2"><span class="w-2 h-2 bg-green-500 rounded-full"></span> Updated: {datetime.now().strftime("%B %d, %Y")}</span>
+                <span class="flex items-center gap-2"><span class="w-2 h-2 bg-blue-500 rounded-full"></span> {total} Active Opportunities</span>
+                <span class="flex items-center gap-2"><span class="w-2 h-2 bg-purple-500 rounded-full"></span> 100% Free to Use</span>
+            </div>
         </div>
     </header>
 
-    <main class="max-w-6xl mx-auto px-4 py-8">
+    <main class="max-w-6xl mx-auto px-4 py-12">
 
         <!-- Stats -->
-        <div class="grid grid-cols-2 md:grid-cols-{len(niche_counts)} gap-3 mb-8">
+        <div class="grid grid-cols-2 md:grid-cols-{len(niche_counts)} gap-4 mb-12">
             {stats_html}
         </div>
 
         <!-- Search + Filters -->
-        <div class="bg-white rounded-xl shadow-sm p-4 mb-8 flex flex-wrap gap-3 items-center">
-            <input type="text" id="search" placeholder="Search grants..." oninput="filterAll()" class="flex-1 min-w-[200px] border border-gray-200 rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-300">
-            <button onclick="filterNiche('ALL')" class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 font-medium text-sm transition active-filter">All</button>
-            {filter_buttons}
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-4 mb-8 sticky top-20 z-40 transition-shadow hover:shadow-md">
+            <div class="flex flex-wrap gap-4 items-center">
+                <div class="relative flex-1 min-w-[200px]">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    </div>
+                    <input type="text" id="search" placeholder="Search by name, foundation, or keyword..." oninput="filterAll()" class="w-full pl-10 border border-gray-200 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition">
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <button onclick="filterNiche('ALL')" class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 font-medium text-sm transition active-filter">All Grants</button>
+                    {filter_buttons}
+                </div>
+            </div>
         </div>
 
         <!-- Grid -->
-        <div id="grid" class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div id="grid" class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {cards_html}
         </div>
 
-        <p id="no-results" class="hidden text-center text-gray-400 py-12 text-lg">No grants match your search.</p>
+        <div id="no-results" class="hidden text-center py-24">
+            <p class="text-xl text-gray-400 font-medium">No grants match your search.</p>
+            <button onclick="document.getElementById('search').value=''; filterAll();" class="mt-4 text-teal-600 hover:text-teal-800 font-medium">Clear Search</button>
+        </div>
 
-        <!-- Free Resources CTA -->
-        <div class="mt-12 bg-emerald-50 border border-emerald-200 rounded-xl p-8 text-center">
-            <h2 class="text-2xl font-bold text-emerald-800 mb-3">&#x1f49a; Need Free or Low-Cost Therapy?</h2>
-            <p class="text-emerald-700 mb-4">Many families qualify for free therapy services through government programs, Regional Centers, and Early Intervention. We've compiled the best resources.</p>
-            <a href="resources.html" class="inline-block bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-emerald-700 transition">Browse Free Resources &rarr;</a>
+        <!-- About Section -->
+        <div id="about" class="mt-24 bg-white rounded-2xl p-8 md:p-12 border border-gray-100 text-center max-w-3xl mx-auto shadow-sm">
+            <h2 class="text-2xl font-bold text-slate-800 mb-4">About {BRAND}</h2>
+            <p class="text-slate-600 mb-6 leading-relaxed">
+                Finding funding shouldn't be a full-time job. {BRAND} is an open directory designed to help allied health professionals and families discover financial support without sifting through endless Google results.
+            </p>
+            <p class="text-slate-600 mb-8 leading-relaxed">
+                We aggregate data from public foundations and verified sources daily. We are not a grant-maker; we simply connect you to the application sources.
+            </p>
+            <div class="flex justify-center gap-4">
+                <a href="mailto:hello@grantflow.vercel.app" class="text-teal-700 hover:text-teal-900 font-medium">Contact Us</a>
+                <span class="text-gray-300">|</span>
+                <a href="resources.html" class="text-teal-700 hover:text-teal-900 font-medium">View Free Resources</a>
+            </div>
         </div>
 
     </main>
 
-    <footer class="bg-gray-800 text-gray-400 py-6 mt-12">
-        <div class="max-w-6xl mx-auto px-4 text-center text-sm">
-            <p>&copy; 2026 {BRAND}. Automated grant discovery for allied health professionals and families.</p>
-            <p class="mt-1">Data sourced from public foundations. Always verify details on official sites.</p>
+    <footer class="bg-white border-t border-gray-200 py-12 mt-12">
+        <div class="max-w-6xl mx-auto px-4 text-center text-sm text-gray-500">
+            <p class="font-semibold text-slate-700 mb-2">&copy; 2026 {BRAND}</p>
+            <p>Data sourced from public foundations. We do not guarantee funding availability.</p>
+            <p class="mt-4 text-xs text-gray-400">Built to help.</p>
         </div>
     </footer>
 
@@ -311,6 +345,16 @@ def build_index(grants, grant_slugs):
 
         function filterNiche(niche) {{
             activeNiche = niche;
+            
+            // Update active button state
+            document.querySelectorAll('button').forEach(btn => {{
+                if (btn.textContent.includes(niche) || (niche === 'ALL' && btn.textContent.includes('All'))) {{
+                    btn.classList.add('ring-2', 'ring-teal-500', 'ring-offset-1');
+                }} else {{
+                    btn.classList.remove('ring-2', 'ring-teal-500', 'ring-offset-1');
+                }}
+            }});
+
             filterAll();
         }}
 
@@ -333,6 +377,9 @@ def build_index(grants, grant_slugs):
 
             document.getElementById('no-results').classList.toggle('hidden', visible > 0);
         }}
+
+        // Init
+        filterNiche('ALL');
     </script>
 
 </body>
@@ -355,20 +402,30 @@ def build_resources_page(resources):
     cards = ""
     for r in resources:
         services = ", ".join(r.get("services", []))
-        highlight_class = "ring-2 ring-blue-300" if r.get("highlight") else ""
+        highlight_class = "border-teal-500 bg-teal-50/50" if r.get("highlight") else "border-gray-200 bg-white"
 
         cards += f'''
-<div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition {highlight_class}">
-    <div class="flex items-center justify-between mb-2">
-        <span class="inline-block bg-emerald-100 text-emerald-700 text-xs font-bold uppercase px-2 py-0.5 rounded-full">{r.get("type", "Resource")}</span>
-        <span class="text-xs text-gray-400">{r.get("coverage", "")}</span>
+<div class="p-6 rounded-xl border {highlight_class} shadow-sm hover:shadow-md transition">
+    <div class="flex items-center justify-between mb-3">
+        <span class="inline-block bg-teal-100 text-teal-800 text-xs font-bold uppercase px-2 py-0.5 rounded-full">{r.get("type", "Resource")}</span>
+        <span class="text-xs text-gray-400 font-medium">{r.get("coverage", "")}</span>
     </div>
-    <h3 class="text-lg font-bold text-gray-900 mb-2">{r["title"]}</h3>
-    <p class="text-sm text-gray-600 mb-3">{r["description"]}</p>
-    <div class="text-xs text-gray-500 mb-2"><strong>Services:</strong> {services}</div>
-    <div class="text-xs text-gray-500 mb-3 bg-gray-50 p-2 rounded"><strong>Eligibility:</strong> {r.get("eligibility", "See website")}</div>
-    <a href="{r["link"]}" target="_blank" rel="noopener" class="inline-block bg-emerald-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-emerald-700 transition">
-        Learn More &rarr;
+    <h3 class="text-lg font-bold text-slate-900 mb-2">{r["title"]}</h3>
+    <p class="text-sm text-slate-600 mb-4 leading-relaxed">{r["description"]}</p>
+    
+    <div class="space-y-2 mb-4">
+        <div class="text-xs text-slate-500 flex gap-2">
+            <span class="font-semibold text-slate-700 min-w-[60px]">Services:</span>
+            <span>{services}</span>
+        </div>
+        <div class="text-xs text-slate-500 flex gap-2">
+            <span class="font-semibold text-slate-700 min-w-[60px]">Eligibility:</span>
+            <span>{r.get("eligibility", "See website")}</span>
+        </div>
+    </div>
+
+    <a href="{r["link"]}" target="_blank" rel="noopener" class="inline-flex items-center text-teal-700 hover:text-teal-900 text-sm font-semibold transition">
+        Visit Website &rarr;
     </a>
 </div>'''
 
@@ -377,63 +434,67 @@ def build_resources_page(resources):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Therapy Resources for Families | {BRAND}</title>
+    <title>Free Therapy Resources | {BRAND}</title>
     <meta name="description" content="Free and low-cost speech therapy, occupational therapy, and physical therapy resources for families. Regional centers, early intervention, government programs, and more.">
-    <meta property="og:title" content="Free Therapy Resources for Families | {BRAND}">
+    <meta property="og:title" content="Free Therapy Resources | {BRAND}">
     <meta property="og:description" content="Free and low-cost therapy resources including Regional Centers, Early Intervention, Medicaid, and university clinics.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{SITE_URL}/resources.html">
     <link rel="canonical" href="{SITE_URL}/resources.html">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'); body {{ font-family: 'Inter', sans-serif; }}</style>
 </head>
-<body class="bg-gray-50 text-gray-800 min-h-screen">
+<body class="bg-slate-50 text-slate-800 min-h-screen">
 
-    <nav class="bg-white border-b">
-        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-            <a href="index.html" class="text-xl font-bold text-blue-700">&#x1f680; {BRAND}</a>
-            <div class="flex gap-4 text-sm">
-                <a href="index.html" class="text-gray-500 hover:text-blue-600">Grants</a>
-                <a href="resources.html" class="text-blue-600 font-semibold">Free Resources</a>
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="index.html" class="text-xl font-bold text-slate-800 flex items-center gap-2">💙 {BRAND}</a>
+            <div class="flex gap-6 text-sm font-medium">
+                <a href="index.html" class="text-gray-500 hover:text-teal-600 transition">Directory</a>
+                <a href="resources.html" class="text-teal-700">Free Resources</a>
             </div>
         </div>
     </nav>
 
-    <header class="bg-gradient-to-br from-emerald-600 to-teal-700 text-white">
-        <div class="max-w-6xl mx-auto px-4 py-12">
-            <h1 class="text-4xl md:text-5xl font-bold">&#x1f49a; Free & Low-Cost Resources</h1>
-            <p class="mt-3 text-lg text-emerald-100 max-w-2xl">Government programs, nonprofits, and community resources that help families access speech therapy, OT, PT, and early intervention services — often at no cost.</p>
+    <header class="bg-white border-b border-gray-200">
+        <div class="max-w-4xl mx-auto px-4 py-16 text-center">
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold uppercase tracking-wide mb-4 border border-emerald-100">Zero Cost Support</span>
+            <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-6">Free & Low-Cost Resources</h1>
+            <p class="text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed">Government programs, nonprofits, and community resources that help families access speech therapy, OT, PT, and early intervention services — often at no cost.</p>
         </div>
     </header>
 
-    <main class="max-w-6xl mx-auto px-4 py-8">
+    <main class="max-w-6xl mx-auto px-4 py-12">
 
-        <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-8">
-            <h2 class="text-lg font-bold text-blue-800 mb-2">&#x1f4a1; Did you know?</h2>
-            <p class="text-sm text-blue-700">Many families qualify for free therapy services and don't realize it. Federal programs like Early Intervention (ages 0-3) and school-based services (ages 3-21) are available in every state. California's Regional Centers provide free assessments and services regardless of income for young children.</p>
+        <div class="bg-blue-50 border border-blue-100 rounded-xl p-6 mb-12 flex gap-4 items-start">
+            <div class="text-2xl">💡</div>
+            <div>
+                <h2 class="text-lg font-bold text-blue-900 mb-1">Did you know?</h2>
+                <p class="text-sm text-blue-800 leading-relaxed">Many families qualify for free therapy services and don't realize it. Federal programs like Early Intervention (ages 0-3) and school-based services (ages 3-21) are available in every state. California's Regional Centers provide free assessments and services regardless of income for young children.</p>
+            </div>
         </div>
 
         <div class="grid gap-6 md:grid-cols-2">
             {cards}
         </div>
 
-        <div class="mt-12 bg-gray-100 rounded-xl p-8 text-center">
-            <h2 class="text-2xl font-bold text-gray-800 mb-3">Looking for Grants Instead?</h2>
-            <p class="text-gray-600 mb-4">We track 40+ grants and scholarships for allied health professionals and families.</p>
-            <a href="index.html" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">Browse All Grants &rarr;</a>
+        <div class="mt-16 bg-white border border-gray-200 rounded-xl p-12 text-center shadow-sm">
+            <h2 class="text-2xl font-bold text-slate-800 mb-4">Looking for Grants?</h2>
+            <p class="text-slate-500 mb-8">We track 40+ grants and scholarships for allied health professionals and families.</p>
+            <a href="index.html" class="inline-block bg-teal-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-teal-700 transition shadow-sm">Browse Grant Directory &rarr;</a>
         </div>
 
     </main>
 
-    <footer class="bg-gray-800 text-gray-400 py-6 mt-12">
-        <div class="max-w-6xl mx-auto px-4 text-center text-sm">
-            <p>&copy; 2026 {BRAND}. Automated grant discovery for allied health professionals and families.</p>
-            <p class="mt-1">Information is for guidance only. Always verify details on official sites.</p>
+    <footer class="bg-white border-t border-gray-200 py-12 mt-12">
+        <div class="max-w-6xl mx-auto px-4 text-center text-sm text-gray-500">
+            <p class="font-semibold text-slate-700 mb-2">&copy; 2026 {BRAND}</p>
+            <p>Information is for guidance only. Always verify details on official sites.</p>
         </div>
     </footer>
 
 </body>
 </html>'''
-
 
 def build_robots():
     return f"""User-agent: *
